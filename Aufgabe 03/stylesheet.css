@@ -2,11 +2,12 @@
 body {
     background-color: #249E3F;
     font-family: fantasy;
-    font-size: 1.8 em;
+    font-size: 1.8em;
+    color: #1E1405;
 }
 p {
     font-family: "Helvetica", "Arial", sans-serif;
-    font-size: 3 em;
+    font-size: 3em;
     color: #1E1405;
 
 }
