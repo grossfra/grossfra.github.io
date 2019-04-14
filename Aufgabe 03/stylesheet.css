@@ -15,4 +15,9 @@ article {
     background-color: #EC7D0B;
     width: 100%;
 }
+img {
+height: auto
+width: 100%
+border-radius: 8px
+}
    
