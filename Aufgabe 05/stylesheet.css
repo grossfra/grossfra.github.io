@@ -19,6 +19,36 @@ ul
     padding: 5px;
     background-color: #EC7D0B;
 }
+li
+{
+    color: antiquewhite;
+    display: inline;
+    font-size: 1.2em;
+    padding: 10px;
+}
+li:hover
+{
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: black;
+}
+aside
+{
+    width: 15%;
+    background-color: #249E3F;
+    overflow: auto;
+    z-index: 100;
+}
+.left
+{
+    float: left;
+}
+.left:hover
+{
+    width: 20%;
+    position: absolute;
+    transition: 300ms;
+}
 body {
     margin: 0;
     background-color: #249E3F;
