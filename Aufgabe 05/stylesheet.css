@@ -5,6 +5,13 @@ header
     clear: left;
     background-color: #249E3F;
 }
+h1
+{
+    text-align: center;
+    font-size: 1.9em;
+    color: #1E1405;
+    margin: 0%;
+}
 body {
     margin: 0;
     background-color: #249E3F;
