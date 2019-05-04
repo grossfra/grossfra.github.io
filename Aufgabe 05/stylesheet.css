@@ -1,5 +1,9 @@
 /* stylesheet.css für Aufgabe 03 */
+* {
+   box-sizing: border-box; 
+}
 body {
+    margin: 0;
     background-color: #249E3F;
     font-family: fantasy;
     font-size: 1.9em;
