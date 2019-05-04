@@ -49,6 +49,16 @@ aside
     position: absolute;
     transition: 300ms;
 }
+.right
+{
+    float: right;
+}
+main
+{
+    width: 55%;
+    background-color: #249E3F;
+    margin-left: 15%;
+}
 body {
     margin: 0;
     background-color: #249E3F;
