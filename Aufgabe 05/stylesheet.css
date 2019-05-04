@@ -12,6 +12,13 @@ h1
     color: #1E1405;
     margin: 0%;
 }
+ul
+{
+    text-align: center;
+    list-style-type: none;
+    padding: 5px;
+    background-color: #EC7D0B;
+}
 body {
     margin: 0;
     background-color: #249E3F;
