@@ -1,6 +1,9 @@
 /* stylesheet.css für Aufgabe 03 */
-* {
-   box-sizing: border-box; 
+header
+{
+    width: 100%;
+    clear: left;
+    background-color: #249E3F;
 }
 body {
     margin: 0;
