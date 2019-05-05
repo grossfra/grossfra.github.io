@@ -36,8 +36,12 @@ aside
 {
     width: 15%;
     background-color: #249E3F;
-    overflow: auto;
-    z-index: 100;
+    position: fixed;
+    padding: 1%;
+}
+aside:hover
+{
+    width: 15%;
 }
 .left
 {
