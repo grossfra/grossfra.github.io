@@ -83,12 +83,24 @@ article
     float: left;
     margin: 1em;
 }
+article:hover
+{
+    background-color: #EC7D0B;
+}
 footer
 {
     width: 100%;
     text-align: center;
     background-color: rosybrown;
     float: left;
+}
+.aufgabe5 {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 1em;
+    background-color: #EC7D0B;
 }
 body {
     margin: 0;
@@ -119,4 +131,3 @@ height: auto;
 width: 30%;
 border-radius: 5px;
 }
-   
