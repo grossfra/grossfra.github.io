@@ -5,6 +5,12 @@ header
     clear: left;
     background-color: #249E3F;
 }
+nav
+{
+    margin-left: 5%;
+    float: left;
+    margin-top: -3%;
+}
 h1
 {
     text-align: center;
