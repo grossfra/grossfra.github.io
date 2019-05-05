@@ -12,11 +12,12 @@ h1
     color: #1E1405;
     margin: 0%;
 }
-nav.static
-{
-    position: fixed;
-}
 nav
+{
+    text-align: center;
+    font-family: fantasy;
+    color: #EC7D0B;
+}
 {
     font-size: 1.9em;
     color:#EC7D0B;
