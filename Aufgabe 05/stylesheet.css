@@ -74,6 +74,13 @@ section
 {background-color: burlywood}
 .B
 {background-color: cadetblue}
+footer
+{
+    width: 100%;
+    text-align: center;
+    background-color: rosybrown;
+    float: left;
+}
 body {
     margin: 0;
     background-color: #249E3F;
