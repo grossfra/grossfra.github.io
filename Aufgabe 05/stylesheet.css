@@ -18,6 +18,7 @@ nav
     font-family: fantasy;
     color: #EC7D0B;
 }
+ul
 {
     font-size: 1.9em;
     color:#EC7D0B;
@@ -112,14 +113,6 @@ footer
     text-align: center;
     background-color: rosybrown;
     float: left;
-}
-.aufgabe5 {
-    position: relative;
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    margin: 1em;
-    background-color: #EC7D0B;
 }
 body {
     margin: 0;
