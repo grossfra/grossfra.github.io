@@ -24,13 +24,6 @@ ul
     color:#EC7D0B;
     text-align: center;
 }
-ul:hover
-{
-    text-align: center;
-    list-style-type: none;
-    padding: 5px;
-    background-color: #EC7D0B;
-}
 li
 {
     color: antiquewhite;
