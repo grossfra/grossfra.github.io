@@ -12,17 +12,12 @@ h1
     color: #1E1405;
     margin: 0%;
 }
-nav
-{
-    text-align: center;
-    font-family: fantasy;
-    color: #EC7D0B;
-}
 ul
 {
-    font-size: 1.9em;
+    font-size: 5em;
     color:#EC7D0B;
     text-align: center;
+    margin: 0%;
 }
 li
 {
@@ -43,10 +38,6 @@ aside
     background-color: #249E3F;
     overflow: auto;
     z-index: 100;
-}
-aside:hover
-{
-    width: 20%;
 }
 .left
 {
@@ -90,15 +81,6 @@ section
 {
     background-color: #EC7D0B;
     float: right;
-}
-article
-{
-    float: left;
-    margin: 1em;
-}
-article:hover
-{
-    background-color: #EC7D0B;
 }
 footer
 {
