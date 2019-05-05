@@ -5,12 +5,6 @@ header
     clear: left;
     background-color: #249E3F;
 }
-nav
-{
-    margin-left: 5%;
-    float: left;
-    margin-top: -3%;
-}
 h1
 {
     text-align: center;
@@ -45,6 +39,10 @@ aside
     overflow: auto;
     z-index: 100;
 }
+aside:hover
+{
+    width: 20%;
+}
 .left
 {
     float: left;
@@ -74,12 +72,11 @@ section
     margin: 0.5%;
     padding: 0.5%;
 }
-.A
-{background-color: azure}
-.T
-{background-color: burlywood}
-.B
-{background-color: cadetblue}
+section:first-of-type,section:nth-of-type(5)
+{
+    margin-left: 0%;
+    clear: both;
+}
 footer
 {
     width: 100%;
