@@ -57,8 +57,23 @@ main
 {
     width: 55%;
     background-color: #249E3F;
-    margin-left: 15%;
+    margin-left: 15%;    
 }
+section
+{
+    float: left;
+    width: 15%;
+    height: 250px;
+    overflow: auto;
+    margin: 0.5%;
+    padding: 0.5%;
+}
+.A
+{background-color: azure}
+.T
+{background-color: burlywood}
+.B
+{background-color: cadetblue}
 body {
     margin: 0;
     background-color: #249E3F;
