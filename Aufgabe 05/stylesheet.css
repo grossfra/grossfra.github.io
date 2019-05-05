@@ -14,10 +14,10 @@ h1
 }
 ul
 {
-    font-size: 1.9em;
-    color:#EC7D0B;
     text-align: center;
-    margin: 0%;
+    list-style-type: none;
+    padding: 5px;
+    background-color: #EC7D0B;
 }
 li
 {
