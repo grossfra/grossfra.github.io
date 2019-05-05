@@ -78,10 +78,10 @@ section
     margin: 0.5%;
     padding: 0.5%;
 }
-section:first-of-type,section:nth-of-type(5)
+article
 {
-    margin-left: 0%;
-    clear: both;
+    float: left;
+    margin: 1em;
 }
 footer
 {
