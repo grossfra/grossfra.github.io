@@ -12,6 +12,16 @@ h1
     color: #1E1405;
     margin: 0%;
 }
+nav.static
+{
+    position: fixed;
+}
+nav
+{
+    font-size: 1.9em;
+    color:#EC7D0B;
+    text-align: center;
+}
 ul:hover
 {
     text-align: center;
