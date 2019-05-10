@@ -63,7 +63,7 @@ aside:hover
 }
 main
 {
-    width: 55%;
+    width: 80%;
     background-color: #249E3F;
     margin-left: 15%;    
 }
@@ -94,7 +94,7 @@ footer
     width: 100%;
     text-align: center;
     background-color: rosybrown;
-    position: absolute;
+    clear: both;
 }
 body {
     margin: 0;
