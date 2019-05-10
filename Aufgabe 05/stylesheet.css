@@ -57,20 +57,14 @@ aside:hover
 {
     float: right;
 }
-.Inhaltsverzeichnis
-{
-    width: 40%;
-    background-color: #249E3F;
-    margin-left: 15%;
-    float: left;
-}
+
 main
 {
     width: 55%;
     background-color: #249E3F;
     margin-left: 15%;    
 }
-section
+.Inhaltsverzeichnis
 {
     float: left;
     width: 15%;
