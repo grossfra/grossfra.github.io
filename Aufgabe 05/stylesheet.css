@@ -57,14 +57,18 @@ aside:hover
 {
     float: right;
 }
-
+.Inhaltsverzeichnis
+{
+    width: 40%;
+    float: left;
+}
 main
 {
     width: 55%;
     background-color: #249E3F;
     margin-left: 15%;    
 }
-.Inhaltsverzeichnis
+section
 {
     float: left;
     width: 15%;
@@ -73,6 +77,7 @@ main
     margin: 0.5%;
     padding: 0.5%;
 }
+
 #Aufzucht
 {
     background-color: #EC7D0B;
