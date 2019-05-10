@@ -58,12 +58,12 @@ aside:hover
 }
 .Inhaltsverzeichnis
 {
-    width: 40%;
+    width: 30%;
     float: left;
 }
 main
 {
-    width: 80%;
+    width: 90%;
     background-color: #249E3F;
     margin-left: 15%;    
 }
