@@ -57,7 +57,17 @@ aside:hover
 {
     float: right;
 }
-.Inhaltsverzeichnis
+.Aufzucht
+{
+    width: 40%;
+    float: left;
+}
+.Training
+{
+    width: 40%;
+    float: left;
+}
+.Besonderheiten
 {
     width: 40%;
     float: left;
