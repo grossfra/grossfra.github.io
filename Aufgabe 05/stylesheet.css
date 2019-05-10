@@ -94,6 +94,7 @@ footer
     width: 100%;
     text-align: center;
     background-color: rosybrown;
+    position: relative;
     clear: both;
 }
 body {
