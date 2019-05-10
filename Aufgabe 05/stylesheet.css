@@ -104,7 +104,7 @@ footer
     width: 100%;
     text-align: center;
     background-color: rosybrown;
-    float: left;
+    position: absolute;
 }
 body {
     margin: 0;
