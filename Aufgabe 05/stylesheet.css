@@ -32,12 +32,13 @@ li:hover
     cursor: pointer;
     background-color: rosybrown;
 }
-aside
+.aside
 {
     width: 15%;
     background-color: #249E3F;
     position: relative;
     padding: 1%;
+    float: left;
 }
 aside:hover
 {
