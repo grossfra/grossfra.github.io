@@ -140,6 +140,11 @@ border-radius: 5px;
          float: left;
          margin-left: 3%;
      }
+     .Inhaltsverzeichnis {
+         width: 50%;
+         float: left;
+         margin-left: 3%;
+     }
      aside {
          background-color: #249E3F;
          width: 15%;
