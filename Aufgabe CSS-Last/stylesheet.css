@@ -1,0 +1,128 @@
+/* stylesheet.css für Aufgabe 03 */
+header
+{
+    width: 100%;
+    clear: left;
+    background-color: #249E3F;
+}
+h1
+{
+    text-align: center;
+    font-size: 1.9em;
+    color: #1E1405;
+    margin: 0%;
+}
+ul
+{
+    text-align: center;
+    list-style-type: none;
+    padding: 5px;
+    background-color: #EC7D0B;
+}
+li
+{
+    color: antiquewhite;
+    display: inline;
+    font-size: 1.2em;
+    padding: 10px;
+}
+li:hover 
+{
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: rosybrown;
+}
+aside
+{
+    width: 10%;
+    background-color: #249E3F;
+    position: absolute;
+}
+aside:hover
+{
+    width: 15%;
+}
+.left
+{
+    float: left;
+}
+.left:hover
+{
+    width: 20%;
+    position: absolute;
+    transition: 300ms;
+}
+.right
+{
+    float: right;
+}
+.Inhaltsverzeichnis
+{
+    width: 30%;
+    float: left;
+}
+main
+{
+    background-color: #249E3F;
+    margin-left: 15%;    
+}
+section
+{
+    float: left;
+    width: 15%;
+    height: 250px;
+    overflow: auto;
+    margin: 0.5%;
+    padding: 0.5%;
+}
+
+#Aufzucht
+{
+    background-color: #EC7D0B;
+}
+#Training
+{
+    background-color: #EC7D0B;
+}
+#Besonderheiten
+{
+    background-color: #EC7D0B;
+}
+footer
+{
+    width: 100%;
+    text-align: center;
+    background-color: rosybrown;
+    position: absolute;
+    bottom: -500px;
+    clear: both;
+}
+body {
+    margin: 0;
+    background-color: #249E3F;
+    font-family: fantasy;
+    font-size: 1.5em;
+    color: #1E1405;
+}
+p {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 1.1em;
+    color: #1E1405;
+
+}
+section {
+    background-color: #EC7D0B;
+    width: 100%;
+}
+article {
+    background-color: #EC7D0B;
+    width: 100%;
+}
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+height: auto;
+width: 30%;
+border-radius: 5px;
+}
