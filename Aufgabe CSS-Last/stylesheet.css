@@ -129,7 +129,7 @@ border-radius: 5px;
 
 /*Phone-Ansicht*/
 
-@media screen and (min-widt: 60em) {
+@media screen and (min-width: 60em) {
     main {
         width: 75%;
         margin-left: 25%;
