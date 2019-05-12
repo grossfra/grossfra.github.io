@@ -35,6 +35,19 @@ li:hover
     cursor: pointer;
     background-color: rosybrown;
 }
+#burger
+{
+    font-size: 1.2em;
+    line-height: 1em;
+    display: block;
+    letter-spacing: -.03333em;
+    width: 5em;
+    transition: transform 0.8s;
+}
+#burger:hover
+{
+    transform: rotate(90deg);
+}
 .burgermenu
 {
     background-color: black;
