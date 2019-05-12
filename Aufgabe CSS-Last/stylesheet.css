@@ -178,11 +178,6 @@ border-radius: 5px;
          float: left;
          margin-left: 2%;
      }
-     .Inhaltsverzeichnis {
-         width: 50%;
-         float: left;
-         margin-left: 3%;
-     }
      aside {
          background-color: #249E3F;
          width: 15%;
@@ -197,3 +192,26 @@ border-radius: 5px;
          margin-left: 0%;
      }
 }
+
+/* Tablet-Ansicht */
+
+@media screen and (min-width: 90em) {
+    main {
+        width: 60%;
+        margin-left: 20%;
+     }
+     section {
+         width: 23.5%;
+         float: left;
+         margin-left: 2%;
+     
+     }
+     section:nth-of-type(2n+1)
+     {
+         margin-left: 2%;
+     }
+     section:first-of-type,section:nth-of-type(4n+1) {
+         margin-left: 0%;
+         clear: both;
+     }
+    }
