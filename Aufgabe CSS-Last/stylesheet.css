@@ -35,6 +35,13 @@ li:hover
     cursor: pointer;
     background-color: rosybrown;
 }
+div
+{
+    width: 5em;
+    height: 1em;
+    background-color: aliceblue;
+    margin-bottom: 0.2em;
+}
 #burger
 {
     font-size: 1.2em;
