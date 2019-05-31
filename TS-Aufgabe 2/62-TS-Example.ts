@@ -33,7 +33,7 @@ interface Monster {
 let monsterHolder : string = "monsterHoldingCell";                                  // ID für das Haupt-Element, in welchem die Monster sich befinden werden. Wird vielleicht mehrfach in dem Skript gebraucht, deshalb einmalig definitiert.
 
 let playerName : string = "Spielername";                                            // Ein paar globale Variablen, welche den Spieler darstellen.
-let playerXP : number;                                                          // Stellt die gesammelte Erfahrung des Spielers dar.
+let playerXP : number = 0;                                                          // Stellt die gesammelte Erfahrung des Spielers dar.
 let playerXPperLevel : number = 500;                                                // Da es nur einen Spieler gibt, ergibt sich noch nicht viel Sinn darin, für den Spieler ein interface (im Sinne der Programmierung) zu erstellen.
 
 // Mehrere Arrays, welche jeweils Bauteile für Namen oder Eigenschaften der Monster beinhalten.
