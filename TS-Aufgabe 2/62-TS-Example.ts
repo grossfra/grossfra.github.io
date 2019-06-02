@@ -42,9 +42,9 @@ let playerXPperLevel : number = 500;
 let prefix : string[] = ["Wald-", "Seuchen-", "Uralte(s) ", "Gift-", "Brennende(s) ", "Kniescheibenzertrümmernde(s) "]; // length = 6, da 6 Einträge. Von 0-5.
 let monsterName : string[] = ["Ratte", "Nagetier", "Ungeziefer"]; // length = 3, da 3 Einträge. Von 0-2.
 let suffix : string[] = [" des Verderbens", " aus der Hölle", " der Lethalität", " mit Rheuma", " der Redundanz", " der Zerberstung"]; // length = 6, da hier 6 Einträge sind. Von 0-5.
-
+let picScr: string[] = ["imgs/elefant.png", "imgs/loewe.png", "imgs/pinguin.png"];
 let monsterModifers : string[] = ["Ist nervig", "Linkshänder", "Bier-Connoisseur", "Verfehlt häufig", "Prokrastiniert", "Müde", "Verwirrt", "Wasserscheu", "Bipolar", "Hat Schnupfen", "Verläuft sich oft"]; // Eine Reihe von zufälligen "Verstärkern" für das Monster.
-
+let MonsterPoB : string[] = ["Indien", "Nordpol", "Afrika"];
 // -- Initialisierung für viele/variable Anzahl an Monster --
 let monsterArray : Monster[] = []; // Das Haupt-Array wurde erstellt und initialisiert!
 console.log(monsterArray ); // Gebe das Monster-Array einmal zu beginn aus. Es sollte leer sein.
@@ -72,6 +72,7 @@ function generateMonster()
     let newMonsterModifier : string[] = generateMonsterModifer();       // Eigens-gebaute Funktion, welche ein string-Array zurück gibt.
     let newMonsterPic : string = generateMonsterPic();
     let newMonsterPoB : string = generateMonsterPoB();
+    
     let newMonster : Monster = {                                        // Monster wird erstellt.
         monsterName : newMonsterName, 
         monsterHealthPoints : newMonsterHP,
@@ -109,6 +110,10 @@ function monsterGenerateHTML()
     monsterImg.setAttribute("src", monsterArray[monsterArray.length -1].MonsterPic);                 // Der Pfad für das Bild muss über setAttribute festgelegt werden. Der Bildpfad kann natürlich auch anders aussehen.
     monsterImg.setAttribute("alt", "Schreckliches Monster");            // Das alt für das Bild wird hier festgelegt.
     holdingDiv.appendChild(monsterImg);                                 // Füge das Bild zu dem holding-div hinzu (<div>, welche ein paar Zeilen zuvor erstellt worden ist)
+
+   let monsterP : HTMLElement = document.createElement("p");
+   monsterP.innerHTML = monsterArray[monsterArray.length -1].MonsterPoB;
+   holdingDiv.appendChild(monsterP);
 
     let monsterBtn : HTMLElement = document.createElement("BUTTON");    // Erstelle ein <button>-Element
     monsterBtn.innerHTML = "Monster bekämpfen!";                        // Verändere den Inhalt des HTML-Elementes. Der genaue Text ist dabei euch überlassen.
@@ -192,8 +197,14 @@ function generateMonsterModifer() : string[]
     tempMonsterMod[1] = monsterModifers[getRNGNumber(monsterModifers.length)];  // Setze Schublade 1 des Arrays auf einen Wert.
     return tempMonsterMod;                                                      // Gebe das hier zusammengesetzte Array wieder zurück.
 }
-
-
+function generateMonsterPic() : string {
+    let rngNumber : number = getRNGNumber(picScr.length);
+    return picScr[rngNumber];
+}
+function generateMonsterPoB() : string {
+    let rngNumber : number = getRNGNumber(MonsterPoB.length);
+    return MonsterPoB[rngNumber];
+}
 // Aufgerufen, wenn man auf den Button klickt.
 // Der Spieler kämpft gegen das entsprechende Monster. Er erhält dann Erfahrungspunkte.
 function fightMonster(_index : number)
