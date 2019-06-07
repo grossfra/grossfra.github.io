@@ -227,3 +227,14 @@ function updatePlayerLevel()
     document.getElementById("xpCounter").innerHTML = "Player-Level: " + tempLevel + " (XP: " + playerXP + " / " + playerXPperLevel + ")";       // Baue den String für die Spieler-Info zusammen
     console.log("Spieler " + playerName + " hat nun Level " + tempLevel + " mit " + playerXP + " (" + playerXPperLevel + " pro Level)");        // Spieler-Level in der Konsole.
 }
+function neuerPoB() {
+    console.log("neue Lebensräume werden zum Array hinzugefügt");
+    MonsterPoB.push("Berghöhle");
+    MonsterPoB.push("Talsee");
+    MonsterPoB.push("Wiesengraben");
+    MonsterPoB.push("Hongkong");
+    console.log("fertig");
+
+}
+neuerPoB();
+console.log(MonsterPoB);
