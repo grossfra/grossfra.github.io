@@ -190,24 +190,24 @@ function generateMonsterXP() : number
 
 // Wird für die Erstellung der Monster-Modifizierer aufgerufen.
 // Liefert ein Array mit zwei Einträgen zurück.
-function generateMonsterModifer() : string[]
+function generateMonsterModifer()  
 {
-    let tempMonsterMod : string[] = [];                                         // Initialisiere ein leeres Array (verhindert Folge-Fehler)
+    let tempMonsterMod = [];                                         // Initialisiere ein leeres Array (verhindert Folge-Fehler)
     tempMonsterMod[0] = monsterModifers[getRNGNumber(monsterModifers.length)];  // Setze Schublade 0 des Arrays auf einen Wert.
     tempMonsterMod[1] = monsterModifers[getRNGNumber(monsterModifers.length)];  // Setze Schublade 1 des Arrays auf einen Wert.
     return tempMonsterMod;                                                      // Gebe das hier zusammengesetzte Array wieder zurück.
 }
-function generateMonsterPic() : string {
-    let rngNumber : number = getRNGNumber(picScr.length);
+function generateMonsterPic() {
+    let rngNumber = getRNGNumber(picScr.length);
     return picScr[rngNumber];
 }
-function generateMonsterPoB() : string {
-    let rngNumber : number = getRNGNumber(MonsterPoB.length);
+function generateMonsterPoB() {
+    let rngNumber = getRNGNumber(MonsterPoB.length);
     return MonsterPoB[rngNumber];
 }
 // Aufgerufen, wenn man auf den Button klickt.
 // Der Spieler kämpft gegen das entsprechende Monster. Er erhält dann Erfahrungspunkte.
-function fightMonster(_index : number)
+function fightMonster(_index)
 {
 
     console.log("Spieler kämpft gegen Monster und gewinnt!");                       // Ohne Logik mit if/else ist so etwas wie ein Kampf nicht leicht umzusetzen.
