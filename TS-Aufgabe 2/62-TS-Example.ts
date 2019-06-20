@@ -44,11 +44,11 @@ let monsterName: string[] = ["Ratte", "Nagetier", "Ungeziefer", "Laus", "Kakerla
 let suffix: string[] = [" des Verderbens", " aus der Hölle", " der Lethalität", " mit Rheuma", " der Redundanz", " der Zerberstung"]; // length = 6, da hier 6 Einträge sind. Von 0-5.
 
 let picScr: string[] = ["imgs/elefant.png", "imgs/loewe.png", "imgs/pinguin.png", "imgs/Monster1.png", "imgs/Monster2.png", "imgs/Monster3.png", "imgs/Monster4.png", "imgs/Monster5.jpg", "imgs/Monster6.png", "imgs/Monster7.png", "imgs/Monster8.jpg", "imgs/Monster9.png"];
-let monsterModifers: string[] = ["Ist nervig", "Linkshänder", "Bier-Connoisseur", "Verfehlt häufig", "Prokrastiniert", "Müde", "Verwirrt", "Wasserscheu", "Bipolar", "Hat Schnupfen", "Verläuft sich oft"]; // Eine Reihe von zufälligen "Verstärkern" für das Monster.
-let MonsterPoB: string[] = ["Indien", "Nordpol", "Afrika"];
+let monsterModifers: string[] = ["Ist nervig", "Linkshänder", "Bier-Connoisseur", "Verfehlt häufig", "Prokrastiniert", "Müde", "Verwirrt", "Wasserscheu", "Bipolar", "Hat Schnupfen", "Verläuft sich oft", "Hat keinen Orientierungssinn"]; // Eine Reihe von zufälligen "Verstärkern" für das Monster.
+let MonsterPofB: string[] = ["Indien", "Nordpol", "Afrika", "Russland", "Schwarzwald", "Urwald", "Himalaya"];
 // -- Initialisierung für viele/variable Anzahl an Monster --
 let monsterArray: Monster[] = []; // Das Haupt-Array wurde erstellt und initialisiert!
-console.log(monsterArray ); // Gebe das Monster-Array einmal zu beginn aus. Es sollte leer sein.
+console.log(monsterArray); // Gebe das Monster-Array einmal zu beginn aus. Es sollte leer sein.
 
 
 // ----------- Funktionen ----------- //
