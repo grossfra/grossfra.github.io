@@ -135,8 +135,8 @@ function generateMonsterPic() {
     return picScr[rngNumber];
 }
 function generateMonsterPoB() {
-    let rngNumber = getRNGNumber(MonsterPoB.length);
-    return MonsterPoB[rngNumber];
+    let rngNumber = getRNGNumber(MonsterPofB.length);
+    return MonsterPofB[rngNumber];
 }
 // Aufgerufen, wenn man auf den Button klickt.
 // Der Spieler kämpft gegen das entsprechende Monster. Er erhält dann Erfahrungspunkte.
@@ -154,12 +154,12 @@ function updatePlayerLevel() {
 }
 function neuerPoB() {
     console.log("neue Lebensräume werden zum Array hinzugefügt");
-    MonsterPoB.push("Berghöhle");
-    MonsterPoB.push("Talsee");
-    MonsterPoB.push("Wiesengraben");
-    MonsterPoB.push("Hongkong");
+    MonsterPofB.push("Berghöhle");
+    MonsterPofB.push("Talsee");
+    MonsterPofB.push("Wiesengraben");
+    MonsterPofB.push("Hongkong");
     console.log("fertig");
 }
 neuerPoB();
-console.log(MonsterPoB);
+console.log(MonsterPofB);
 //# sourceMappingURL=62-TS-Example.js.map

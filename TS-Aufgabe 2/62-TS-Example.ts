@@ -201,12 +201,12 @@ function generateMonsterPic() {
     return picScr[rngNumber];
 }
 function generateMonsterPoB() {
-    let rngNumber = getRNGNumber(MonsterPoB.length);
-    return MonsterPoB[rngNumber];
+    let rngNumber = getRNGNumber(MonsterPofB.length);
+    return MonsterPofB[rngNumber];
 }
 // Aufgerufen, wenn man auf den Button klickt.
 // Der Spieler kämpft gegen das entsprechende Monster. Er erhält dann Erfahrungspunkte.
-function fightMonster(_index)
+function fightMonster(_index: number)
 {
 
     console.log("Spieler kämpft gegen Monster und gewinnt!");                       // Ohne Logik mit if/else ist so etwas wie ein Kampf nicht leicht umzusetzen.
@@ -228,12 +228,12 @@ function updatePlayerLevel()
 }
 function neuerPoB() {
     console.log("neue Lebensräume werden zum Array hinzugefügt");
-    MonsterPoB.push("Berghöhle");
-    MonsterPoB.push("Talsee");
-    MonsterPoB.push("Wiesengraben");
-    MonsterPoB.push("Hongkong");
+    MonsterPofB.push("Berghöhle");
+    MonsterPofB.push("Talsee");
+    MonsterPofB.push("Wiesengraben");
+    MonsterPofB.push("Hongkong");
     console.log("fertig");
 
 }
 neuerPoB();
-console.log(MonsterPoB);
+console.log(MonsterPofB);
