@@ -92,7 +92,7 @@ for (let i: number = 0; i < newNr; i++) {
 }
 updateHTML();
 }
-function updateHTML(); {
+function updateHTML() {
     clearMonsterCell();
     monsterGenerateHTMLAll();
     console.log("Es sind " + getMonsterCount() + " Monster auf dem Spielfeld");
@@ -130,7 +130,7 @@ function monsterGenerateHTML(i: number) {
     holdingDiv.appendChild(monsterMod);                                // Füge das <p> zum HTML-Dokument hinzu, indem es dem holding-Div angefügt wird.
 
     let monsterImg: HTMLElement = document.createElement("img");       // Erstelle ein <img>-Element
-    monsterImg.setAttribute("src", monsterArray[i].monsterPic);                 // Der Pfad für das Bild muss über setAttribute festgelegt werden. Der Bildpfad kann natürlich auch anders aussehen.
+    monsterImg.setAttribute("src", monsterArray[i].MonsterPic);                 // Der Pfad für das Bild muss über setAttribute festgelegt werden. Der Bildpfad kann natürlich auch anders aussehen.
     monsterImg.setAttribute("alt", "Schreckliches Monster");            // Das alt für das Bild wird hier festgelegt.
     monsterImg.classList.add("moImg");
     holdingDiv.appendChild(monsterImg);                                 // Füge das Bild zu dem holding-div hinzu (<div>, welche ein paar Zeilen zuvor erstellt worden ist)
@@ -245,21 +245,20 @@ updatePlayerLevel();                                                            
 
 
 // Aufgerufen, um das HTML-Element, welches das Spieler-Level darstellt, zu erneuern.
-function updatePlayerLevel()
-{
-    let tempLevel : number = Math.floor(playerXP / playerXPperLevel);                                                                           // Spieler-Level = XP / XPproLevel
+function updatePlayerLevel() {
+    let tempLevel: number = Math.floor(playerXP / playerXPperLevel);                                                                           // Spieler-Level = XP / XPproLevel
 
     document.getElementById("xpCounter").innerHTML = "Player-Level: " + tempLevel + " (XP: " + playerXP + " / " + playerXPperLevel + ")";       // Baue den String für die Spieler-Info zusammen
     console.log("Spieler " + playerName + " hat nun Level " + tempLevel + " mit " + playerXP + " (" + playerXPperLevel + " pro Level)");        // Spieler-Level in der Konsole.
 }
 function neuerPoB() {
-    console.log("neue Lebensräume werden zum Array hinzugefügt");
-    MonsterPoB.push("Berghöhle");
-    MonsterPoB.push("Talsee");
-    MonsterPoB.push("Wiesengraben");
-    MonsterPoB.push("Hongkong");
+    console.log("neue Places of Birth werden zum array hinzugefügt");
+    MonsterPofB.push("Berghöhle");
+    MonsterPofB.push("Talsee");
+    MonsterPofB.push("Wiesengraben");
+    MonsterPofB.push("Hongkong");
     console.log("fertig");
 
 }
-neuerPoB();
-console.log(MonsterPoB);
+neuerPoB()
+console.log(MonsterPofB)
