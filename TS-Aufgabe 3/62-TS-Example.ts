@@ -92,7 +92,28 @@ for (let i: number = 0; i < newNr; i++) {
 }
 updateHTML();
 }
+function updateHTML(); {
+    clearMonsterCell();
+    monsterGenerateHTMLAll();
+    console.log("Es sind " + getMonsterCount() + " Monster auf dem Spielfeld");
+}
 
+function getMonsterCount(): number {
+    return monsterArray.length;
+}
+
+function monsterGenerateHTMLAll() {
+    for (let i : number = 0; i < getMonsterCount(); i++) {
+        monsterGenerateHTML(i);
+}
+}
+
+function clearMonsterCell() {
+    let monsterSheldon: HTMLElement = document.getElementById(monsterHolder);
+    while (monsterSheldon.firstChild) {
+        monsterSheldon.removeChild(monsterSheldon.firstChild);
+    }
+}
 // Generiert HTML-Elemente, welche dann einem Element untergeordnet werden. Erzeugt ebenfalls einen Event-Listener auf dem Button.
 function monsterGenerateHTML()
 {
