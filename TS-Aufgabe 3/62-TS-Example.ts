@@ -177,13 +177,12 @@ function getRNGNumber(_maxNumber: number): number {
 // Diese Funktion gibt einen zusammengewürfelten Namen zurück.
 // Wird für die Monster-generierung verwendet!
 // Liefert einen zusammengesetzten String zurück.
-function generateMonsterName() : string
-{
-    let generatedMonsterName : string = ""; // Erstelle einen leeren String für das Monster
+function generateMonsterName(): string {
+    let generatedMonsterName: string = ""; // Erstelle einen leeren String für das Monster
 
     // Monster-Vorname
     // Mathematik! Hier wird eine zufällig-generierte Zahl benötigt.
-    let rngNumber : number = getRNGNumber(prefix.length);               // Der Rückgabewert der Funktion wird hier verwendet um den entsprechenden Teil des Namens (hier: Anfang) zu generieren.
+    let rngNumber: number = getRNGNumber(prefix.length);               // Der Rückgabewert der Funktion wird hier verwendet um den entsprechenden Teil des Namens (hier: Anfang) zu generieren.
     generatedMonsterName = prefix[rngNumber];                           // Füge den Monsternamen zusammen: nimm aus dem entsprechenden Array mit der zufallsgenerierten Zahl den entsprechenden Eintrag.
 
     // Monster-Mittelname
@@ -201,52 +200,47 @@ function generateMonsterName() : string
 
 // Wird für die Monster-Lebenspunkte aufgerufen.
 // Liefert eine variierende Zahl zurück.
-function generateMonsterHitPoints() : number
-{
+function generateMonsterHitPoints(): number {
     // Diese Funktion gibt eine zufällige ganze Zahl (zwischen 0 und 10) + 1 zurück.
-    let tempMonsterHP : number = 1 + getRNGNumber(10);
+    let tempMonsterHP: number = 1 + getRNGNumber(10);
     return tempMonsterHP;
 }
 
 
 // Wird für die Erstellung der Monster-Lebenspunkte aufgerufen.
 // Liefert eine variierende Zahl zurück.
-function generateMonsterXP() : number
-{
+function generateMonsterXP(): number {
     // Diese Funktion gibt eine zufällige ganze Zahl (zwischen 0 und 350) + 100 zurück.
-    let tempMonsterXP : number = 100 + getRNGNumber(350);
+    let tempMonsterXP: number = 100 + getRNGNumber(999);
     return tempMonsterXP;
 }
 
 
 // Wird für die Erstellung der Monster-Modifizierer aufgerufen.
 // Liefert ein Array mit zwei Einträgen zurück.
-function generateMonsterModifer()  
-{
-    let tempMonsterMod = [];                                         // Initialisiere ein leeres Array (verhindert Folge-Fehler)
+function generateMonsterModifer(): string[] {
+    let tempMonsterMod: string[] = [];                                         // Initialisiere ein leeres Array (verhindert Folge-Fehler)
     tempMonsterMod[0] = monsterModifers[getRNGNumber(monsterModifers.length)];  // Setze Schublade 0 des Arrays auf einen Wert.
     tempMonsterMod[1] = monsterModifers[getRNGNumber(monsterModifers.length)];  // Setze Schublade 1 des Arrays auf einen Wert.
     return tempMonsterMod;                                                      // Gebe das hier zusammengesetzte Array wieder zurück.
 }
-function generateMonsterPic() {
-    let rngNumber = getRNGNumber(picScr.length);
+function generateMonsterPic(): string {
+    let rngNumber: number = getRNGNumber(picScr.length);
     return picScr[rngNumber];
 }
-function generateMonsterPoB() {
-    let rngNumber = getRNGNumber(MonsterPoB.length);
-    return MonsterPoB[rngNumber];
+function generateMonsterPoB(): string {
+    let rngNumber: number = getRNGNumber(MonsterPofB.length);
+    return MonsterPofB[rngNumber];
 }
 // Aufgerufen, wenn man auf den Button klickt.
 // Der Spieler kämpft gegen das entsprechende Monster. Er erhält dann Erfahrungspunkte.
-function fightMonster(_index)
-{
+function fightMonster(_index: number) {
 
-    console.log("Spieler kämpft gegen Monster und gewinnt!");                       // Ohne Logik mit if/else ist so etwas wie ein Kampf nicht leicht umzusetzen.
-    console.log("Das Monster weigert sich zu verschwinden.");                       // Wird nächste Stunde erweitert.
-    
-    playerXP += monsterArray[_index - 1].monsterExperience;                 	    // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
-
-    updatePlayerLevel();
+playerXP += monsterArray[_index ].monsterExperience;
+monsterArray.splice(_index ,1);
+updateHTML();
+updatePlayerLevel();                                                            // Ohne Logik mit if/else ist so etwas wie ein Kampf nicht leicht umzusetzen.
+                                                             // Wird nächste Stunde erweitert.                 	    // _index ist in diesem Fall die Länge des Arrays - allerdings zählt der Computer beginnend von null, nicht eins! Deshalb _index-1.
 }
 
 
