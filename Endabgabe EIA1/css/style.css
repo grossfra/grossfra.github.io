@@ -1,0 +1,10 @@
+/* css für Kartenspiel */
+/* Basic Styles */
+body {
+    font-size: 1.0em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    text-align: center;
+    margin-top: 2em;
+}
