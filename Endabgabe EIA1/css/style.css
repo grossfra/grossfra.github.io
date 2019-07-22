@@ -4,6 +4,9 @@ body {
     font-size: 1.0em;
     font-family: Arial, Helvetica, sans-serif;
 }
+button > img {
+    margin: 0.5em auto;
+}
 h1 {
     text-align: center;
     margin-top: 2em;
