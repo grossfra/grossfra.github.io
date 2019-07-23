@@ -1,13 +1,29 @@
 /* css für Kartenspiel */
 /* Basic Styles */
-body {
-    font-size: 1.0em;
-    font-family: Arial, Helvetica, sans-serif;
+html {
+    height: 100%;
+    margin: 0;
 }
-button > img {
-    margin: 0.5em auto;
+body {
+    background-color: rosybrown;
+    height: 100%;
+    margin: 0;
 }
 h1 {
     text-align: center;
-    margin-top: 2em;
+    margin: 0;
+}
+div {
+    box-sizing: border-box;
+}
+header {
+    position: absolute;
+    bottom: 0.5em;
+    right: 0.5em;
+    background-color: grey;
+}
+footer {
+	position: absolute; 
+	bottom: 0.5em; 
+	right: 1em;
 }
