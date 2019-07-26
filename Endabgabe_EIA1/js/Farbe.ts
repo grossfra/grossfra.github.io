@@ -5,8 +5,3 @@ class Farbe {
         this.name=name;
     }
 }
-let farben = [
- new Farbe("rot"),
- new Farbe("grün"),
- new Farbe ("blau"),
- new Farbe ("gelb") ]

@@ -1,4 +1,12 @@
 class Kartenstapel {
-    ziehen(): Karte{return new Karte(new Farbe(""), new Wertigkeit(""));}
+    anzahl: number=0
+    karten: Karte[]=[]
+    ziehen(): Karte|undefined{this.anzahl--
+    let a=this.karten.pop()  
+    return a     }
+    constructor(karten:Karte[]){
+        this.karten=karten;
+    }
+
     
 }
