@@ -7,17 +7,13 @@ var Karte = /** @class */ (function () {
     Karte.prototype.anzeigen = function () {
         document.writeln(this.farbe.name + " " + this.wert.wert);
     };
+    Karte.prototype.passtAuf = function (obersteKarteAufDemStapel) {
+        if (this.farbe == obersteKarteAufDemStapel.farbe)
+            return true;
+        if (this.wert == obersteKarteAufDemStapel.wert)
+            return true;
+        else
+            return false;
+    };
     return Karte;
 }());
-var karten = []; // erzueugt einzigartige Karten
-for (var i = 0; i < farben.length; i++) {
-    for (var j = 0; j < wertigkeiten.length; j++) {
-        var farbe = farben[i];
-        var wert = wertigkeiten[j];
-        var karte = new Karte(farbe, wert);
-        karten.push(karte);
-    }
-}
-karten.forEach(function (k) {
-    k.anzeigen();
-});

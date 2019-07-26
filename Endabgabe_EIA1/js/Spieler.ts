@@ -8,13 +8,17 @@ class Spieler {
         this.meineKarten = new Kartenstapel([])}
     spielen() {
         let obersteKarteAufDemStapel = this.ablagestapel.oberste()
-        karten.forEach(karte => {
+        this.meineKarten.karten.forEach(karte => {
             if (karte.passtAuf(obersteKarteAufDemStapel)) {
                 this.ablagestapel.erscheinen(karte)
-                this.meineKarten.entferne(karte)
-
+                this.meineKarten.entferne(karte)}
+                return
             }
-        })
+        )
+
+       let neueKarte = this.kartenstapel.ziehen() 
+       this.meineKarten.erscheinen(neueKarte)
+
     }
     gewinnen(): boolean {
         if (this.meineKarten.anzahl == 0) return (true)

@@ -14,5 +14,5 @@ class Karte {
         if (this.wert == obersteKarteAufDemStapel.wert) return true
     else return false}
     }
-} 
+ 
 

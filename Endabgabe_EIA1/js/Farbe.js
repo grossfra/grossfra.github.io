@@ -6,9 +6,3 @@ var Farbe = /** @class */ (function () {
     }
     return Farbe;
 }());
-var farben = [
-    new Farbe("rot"),
-    new Farbe("grün"),
-    new Farbe("blau"),
-    new Farbe("gelb")
-];

@@ -24,6 +24,8 @@ for (let anzahl = 0; anzahl < 3; anzahl++) {
 }
 let obersteKarte = ziehstapel.ziehen()
 ablagestapel.erscheinen(obersteKarte)
+ablagestapel.entferne(obersteKarte)
+alert(ablagestapel.anzahl)
 while (true) { //Runden
     spieler.spielen() // Zug
     if (spieler.gewinnen()) { break }
