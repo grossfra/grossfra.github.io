@@ -5,30 +5,38 @@ class Spieler {
     constructor(kartenstapel: Kartenstapel, ablagestapel: Kartenstapel) {
         this.kartenstapel = kartenstapel
         this.ablagestapel = ablagestapel
-        this.meineKarten = new Kartenstapel([])}
+        this.meineKarten = new Kartenstapel([])
+    }
     spielen() {
         let obersteKarteAufDemStapel = this.ablagestapel.oberste()
-        this.meineKarten.karten.forEach(karte => {
+        for (let i = 0; i < this.meineKarten.anzahl; i++) {
+            let karte = this.meineKarten.karten[i]
             if (karte.passtAuf(obersteKarteAufDemStapel)) {
-                this.ablagestapel.erscheinen(karte)
-                this.meineKarten.entferne(karte)}
+                this.ablagestapel.ablegen(karte)
+                this.meineKarten.entferne(karte)
+
                 return
             }
-        )
+        }
 
-       let neueKarte = this.kartenstapel.ziehen() 
-       this.meineKarten.erscheinen(neueKarte)
+        let neueKarte = this.kartenstapel.ziehen()
+        this.meineKarten.ablegen(neueKarte)
 
     }
     gewinnen(): boolean {
-        if (this.meineKarten.anzahl == 0) return (true)
-        else return (false)
+        if (this.meineKarten.anzahl == 0) {
+            alert("Gewonnen!")
+            return (true)
+        }
+        else {
+            return (false)
+        }
     }
     erhalten(karte: Karte | undefined) {
         if (karte == undefined)
             return;
         else {
-            this.meineKarten.erscheinen(karte)
+            this.meineKarten.ablegen(karte)
         }
     }
 

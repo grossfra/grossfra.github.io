@@ -6,6 +6,16 @@ var Kartenstapel = /** @class */ (function () {
         this.karten = karten;
         this.anzahl = karten.length;
     }
+    Kartenstapel.prototype.anzeigen = function (idOfDiv) {
+        var element = document.getElementById(idOfDiv);
+        element.innerHTML = "";
+        this.karten.forEach(function (karte) {
+            var div = document.createElement("div");
+            div.innerText = karte.farbe.name + " " + karte.wert.wert;
+            div.setAttribute("class", "eineKarte");
+            element.appendChild(div);
+        });
+    };
     Kartenstapel.prototype.entferne = function (karte) {
         if (karte == undefined)
             return;
@@ -14,11 +24,13 @@ var Kartenstapel = /** @class */ (function () {
         this.anzahl--;
     };
     Kartenstapel.prototype.ziehen = function () {
-        this.anzahl--;
         var a = this.karten.pop();
+        if (a != undefined) {
+            this.anzahl--;
+        }
         return a;
     };
-    Kartenstapel.prototype.erscheinen = function (karte) {
+    Kartenstapel.prototype.ablegen = function (karte) {
         if (karte == undefined)
             return;
         this.anzahl++;
@@ -27,6 +39,16 @@ var Kartenstapel = /** @class */ (function () {
     Kartenstapel.prototype.oberste = function () {
         var letzte = this.karten.length - 1;
         return this.karten[letzte];
+    };
+    Kartenstapel.prototype.mischen = function () {
+        for (var i = 0; i < this.anzahl; i++) {
+            var z = this.zufallszahl(this.anzahl);
+            var gelöscht = this.karten.splice(z, 1);
+            this.karten.push(gelöscht[0]);
+        }
+    };
+    Kartenstapel.prototype.zufallszahl = function (max) {
+        return Math.floor(Math.random() * Math.floor(max));
     };
     return Kartenstapel;
 }());

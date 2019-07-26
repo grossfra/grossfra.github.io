@@ -6,26 +6,32 @@ var Spieler = /** @class */ (function () {
         this.meineKarten = new Kartenstapel([]);
     }
     Spieler.prototype.spielen = function () {
-        var _this = this;
         var obersteKarteAufDemStapel = this.ablagestapel.oberste();
-        this.meineKarten.karten.forEach(function (karte) {
+        for (var i = 0; i < this.meineKarten.anzahl; i++) {
+            var karte = this.meineKarten.karten[i];
             if (karte.passtAuf(obersteKarteAufDemStapel)) {
-                _this.ablagestapel.erscheinen(karte);
-                _this.meineKarten.entferne(karte);
+                this.ablagestapel.ablegen(karte);
+                this.meineKarten.entferne(karte);
+                return;
             }
-        });
+        }
+        var neueKarte = this.kartenstapel.ziehen();
+        this.meineKarten.ablegen(neueKarte);
     };
     Spieler.prototype.gewinnen = function () {
-        if (this.meineKarten.anzahl == 0)
+        if (this.meineKarten.anzahl == 0) {
+            alert("Gewonnen!");
             return (true);
-        else
+        }
+        else {
             return (false);
+        }
     };
     Spieler.prototype.erhalten = function (karte) {
         if (karte == undefined)
             return;
         else {
-            this.meineKarten.erscheinen(karte);
+            this.meineKarten.ablegen(karte);
         }
     };
     return Spieler;

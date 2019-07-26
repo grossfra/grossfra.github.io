@@ -19,25 +19,36 @@ for (var i = 0; i < farben.length; i++) {
         karten.push(karte);
     }
 }
-var ziehstapel = new Kartenstapel(karten); //mischen
+var ziehstapel = new Kartenstapel(karten);
+ziehstapel.mischen();
 var ablagestapel = new Kartenstapel([]);
 var spieler = new Spieler(ziehstapel, ablagestapel);
 var computer = new Spieler(ziehstapel, ablagestapel);
+//Austeilen
 for (var anzahl = 0; anzahl < 3; anzahl++) {
     spieler.erhalten(ziehstapel.ziehen());
     computer.erhalten(ziehstapel.ziehen());
 }
+//Startkarte legen
 var obersteKarte = ziehstapel.ziehen();
-ablagestapel.erscheinen(obersteKarte);
-ablagestapel.entferne(obersteKarte);
-alert(ablagestapel.anzahl);
+ablagestapel.ablegen(obersteKarte);
 while (true) { //Runden
     spieler.spielen(); // Zug
+    spieler.meineKarten.anzeigen("eigeneHandkarten");
+    ablagestapel.anzeigen("gespielteKarten");
     if (spieler.gewinnen()) {
         break;
     }
     computer.spielen();
+    ablagestapel.anzeigen("gespielteKarten");
     if (computer.gewinnen()) {
         break;
+    }
+    if (ziehstapel.anzahl == 0) {
+        ziehstapel.karten = ablagestapel.karten;
+        ablagestapel.karten = [];
+        var oben = ziehstapel.ziehen();
+        ablagestapel.ablegen(oben);
+        ziehstapel.mischen();
     }
 }

@@ -13,22 +13,35 @@ for (let i = 0; i < farben.length; i++) {
         karten.push(karte)
     }
 }
-let ziehstapel = new Kartenstapel(karten) //mischen
+let ziehstapel = new Kartenstapel(karten) 
+ziehstapel.mischen()
 let ablagestapel = new Kartenstapel([])
 let spieler = new Spieler(ziehstapel, ablagestapel)
 let computer = new Spieler(ziehstapel, ablagestapel)
-
+//Austeilen
 for (let anzahl = 0; anzahl < 3; anzahl++) {
     spieler.erhalten(ziehstapel.ziehen())
     computer.erhalten(ziehstapel.ziehen())
 }
+//Startkarte legen
 let obersteKarte = ziehstapel.ziehen()
-ablagestapel.erscheinen(obersteKarte)
-ablagestapel.entferne(obersteKarte)
-alert(ablagestapel.anzahl)
+ablagestapel.ablegen(obersteKarte)
+
 while (true) { //Runden
     spieler.spielen() // Zug
+    spieler.meineKarten.anzeigen("eigeneHandkarten")
+    ablagestapel.anzeigen("gespielteKarten")
+
     if (spieler.gewinnen()) { break }
     computer.spielen()
+    ablagestapel.anzeigen("gespielteKarten")
     if (computer.gewinnen()) { break }
+
+    if(ziehstapel.anzahl==0){
+        ziehstapel.karten=ablagestapel.karten
+        ablagestapel.karten=[]
+        let oben = ziehstapel.ziehen()
+        ablagestapel.ablegen(oben)
+        ziehstapel.mischen()
+    }
 }
