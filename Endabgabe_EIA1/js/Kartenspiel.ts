@@ -21,6 +21,9 @@ for (let anzahl = 0; anzahl < 3; anzahl++) {
     spieler.erhalten(kartenstapel.ziehen())
     computer.erhalten(kartenstapel.ziehen())
 }
-while (true){
-spieler.spielen() // Zug
-computer.spielen() }
+while (true) { //Runden
+    spieler.spielen() // Zug
+    if (spieler.gewinnen()) { break }
+    computer.spielen()
+    if (computer.gewinnen()) { break }
+}
