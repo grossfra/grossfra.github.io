@@ -13,14 +13,17 @@ for (let i = 0; i < farben.length; i++) {
         karten.push(karte)
     }
 }
-let kartenstapel = new Kartenstapel(karten)
-let spieler = new Spieler()
-let computer = new Computer()
-let ablagestapel = new Ablagestapel()
+let ziehstapel = new Kartenstapel(karten) //mischen
+let ablagestapel = new Kartenstapel([])
+let spieler = new Spieler(ziehstapel, ablagestapel)
+let computer = new Spieler(ziehstapel, ablagestapel)
+
 for (let anzahl = 0; anzahl < 3; anzahl++) {
-    spieler.erhalten(kartenstapel.ziehen())
-    computer.erhalten(kartenstapel.ziehen())
+    spieler.erhalten(ziehstapel.ziehen())
+    computer.erhalten(ziehstapel.ziehen())
 }
+let obersteKarte = ziehstapel.ziehen()
+ablagestapel.erscheinen(obersteKarte)
 while (true) { //Runden
     spieler.spielen() // Zug
     if (spieler.gewinnen()) { break }
