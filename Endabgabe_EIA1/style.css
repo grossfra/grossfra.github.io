@@ -67,7 +67,7 @@ body {
     margin-top: -0.25em;
     margin-left: 1.8em;
 }
-.middle{
+#middle{
     clear: both;
     background-color: #ffffff;
     border-radius: 100%;
@@ -101,7 +101,7 @@ body {
 button {
     width:100px;
     height:150px;
-    float: right;
+    float: left; ;
     margin:10px;
     border-radius: 10px;
     border-color: #fff;
