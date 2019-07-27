@@ -1,4 +1,7 @@
 class Spieler {
+    spielen() {
+        throw new Error("Method not implemented.");
+    }
     meineKarten: Kartenstapel
     kartenstapel: Kartenstapel
     ablagestapel: Kartenstapel
@@ -7,7 +10,7 @@ class Spieler {
         this.ablagestapel = ablagestapel
         this.meineKarten = new Kartenstapel([])
     }
-    spielen() {
+    automatischspielen() {
         let obersteKarteAufDemStapel = this.ablagestapel.oberste()
         for (let i = 0; i < this.meineKarten.anzahl; i++) {
             let karte = this.meineKarten.karten[i]

@@ -33,7 +33,7 @@ while (true) { //Runden
     ablagestapel.anzeigen("gespielteKarten")
 
     if (spieler.gewinnen()) { break }
-    computer.spielen()
+    computer.automatischspielen()
     ablagestapel.anzeigen("gespielteKarten")
     if (computer.gewinnen()) { break }
 
