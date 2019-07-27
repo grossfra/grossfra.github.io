@@ -13,3 +13,22 @@ body {
     box-shadow: 0 3px 20px gray;
     margin-bottom: 3%;
 }
+.Kartenstapel {
+    width: 14%;
+    height: 30%;
+    background-color: rosybrown;
+    float: left;
+    margin-left: 10%;
+    border-radius: 6%;
+    box-shadow: 0 3px 20px gray;
+}
+.eineKarte {
+    width: 14%;
+    height: 30%;
+    background-color: rosybrown;
+    float: right;
+    margin-right: 10%;
+    border-radius: 6%;
+    box-shadow: 0 3px 20px gray;
+}
+
