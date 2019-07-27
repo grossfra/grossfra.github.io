@@ -23,12 +23,24 @@ body {
     box-shadow: 0 3px 20px gray;
 }
 .eineKarte {
-    width: 14%;
-    height: 30%;
-    background-color: gold;
-    float: right;
-    margin-right: 10%;
-    border-radius: 6%;
-    box-shadow: 0 3px 20px gray;
+    width:100px;
+    height:150px;
+    float: left;
+    margin:10px;
+    border-radius: 10px;
+    border-color: #fff;
+    border-width: 5px;
+    border-style: solid;
+    color:#fff;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 10px 15px #333;
+}
+
+
+
 }
 
