@@ -75,6 +75,17 @@ body {
     margin-left: 19.5%;
     margin-top: -0.45em;
 }
+.bottomleft{
+    transform: rotate(180deg);
+    color: #ffffff;
+    margin-top: -1.9em;
+}
+.bottomright{
+    transform: rotate(180deg);
+    color: #ffffff;
+    margin-left: 1.8em;
+    margin-top: -1.9em;
+}
 
 
 
