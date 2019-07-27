@@ -39,7 +39,7 @@ body {
     justify-content: center;
     box-shadow: 5px 10px 15px #333;
 }
-.HandkartenGegner {
+#HandkartenGegner {
     width:100px;
     height:150px;
     float: right;
