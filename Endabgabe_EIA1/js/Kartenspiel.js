@@ -5,7 +5,7 @@ var Kartenspiel = /** @class */ (function () {
     return Kartenspiel;
 }());
 var wertigkeiten = [
-    new Wertigkeit("null"), new Wertigkeit("eins"), new Wertigkeit("zwei"), new Wertigkeit("drei"), new Wertigkeit("vier"), new Wertigkeit("fünf"), new Wertigkeit("sechs"), new Wertigkeit("sieben")
+    new Wertigkeit("null"), new Wertigkeit("eins"), new Wertigkeit("zwei"), new Wertigkeit("drei"), new Wertigkeit("vier"), new Wertigkeit("fünf"), new Wertigkeit("sechs"), new Wertigkeit("sieben"), new Wertigkeit("acht"), new Wertigkeit("neun")
 ];
 var farben = [
     new Farbe("rot"), new Farbe("grün"), new Farbe("blau"), new Farbe("gelb")
@@ -39,7 +39,7 @@ while (true) { //Runden
     if (spieler.gewinnen()) {
         break;
     }
-    computer.spielen();
+    computer.automatischspielen();
     ablagestapel.anzeigen("gespielteKarten");
     if (computer.gewinnen()) {
         break;

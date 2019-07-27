@@ -6,6 +6,9 @@ var Spieler = /** @class */ (function () {
         this.meineKarten = new Kartenstapel([]);
     }
     Spieler.prototype.spielen = function () {
+        throw new Error("Method not implemented.");
+    };
+    Spieler.prototype.automatischspielen = function () {
         var obersteKarteAufDemStapel = this.ablagestapel.oberste();
         for (var i = 0; i < this.meineKarten.anzahl; i++) {
             var karte = this.meineKarten.karten[i];
