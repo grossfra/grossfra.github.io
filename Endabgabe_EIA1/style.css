@@ -75,6 +75,18 @@ body {
     margin-left: 19.5%;
     margin-top: -0.45em;
 }
+.gelb .middle{
+    color: yellow;
+}
+.blau .middle{
+    color: blue;
+}
+.rot .middle{
+    color: red;
+}
+.grün .middle{
+    color: green;
+}
 .bottomleft{
     transform: rotate(180deg);
     color: #ffffff;
