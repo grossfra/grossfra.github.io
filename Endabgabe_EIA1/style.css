@@ -39,16 +39,16 @@ body {
     justify-content: center;
     box-shadow: 5px 10px 15px #333;
 }
-#rot{
+.rot{
     background: red;
 }
-#grün{
+.grün{
     background: green;
 }
-#blau{
+.blau{
     background: blue;
 }
-#gelb{
+.gelb{
     background: yellow;
 }
 
