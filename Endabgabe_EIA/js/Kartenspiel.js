@@ -3,7 +3,8 @@ let HandkartenSpieler = [];
 let Kartenstapel = [];
 let Ablagestapel = [];
 window.onload = function () {
-    document.getElementById("KarteZiehen").addEventListener("click", KarteZiehen, false);
+    document.getElementById("Kartenstapel").addEventListener("click", KarteZiehen, false);
+    Spielablauf();
 };
 function Spielablauf() {
     ErstellungKarten();

@@ -8,8 +8,8 @@ let HandkartenSpieler: Karte [] = [];
 let Kartenstapel: Karte[] = [];
 let Ablagestapel: Karte[] = [];
 
-window.onload = function() {
-    document.getElementById("KarteZiehen").addEventListener("click", KarteZiehen, false);
+window.onload = function (){
+    document.getElementById("Kartenstapel").addEventListener("click",KarteZiehen,false);
      Spielablauf();   
 }
 
