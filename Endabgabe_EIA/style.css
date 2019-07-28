@@ -10,28 +10,28 @@ div{
     margin-bottom:20%;
     margin-top:5%;
 }
-.Spielkarte{ 
+.Karte{ 
     height:150px;
     width:75px;
     border-style: dashed; 
 }
 
-#Spielerdeck .Spielkarte, #Gegnerdeck .Spielkarte {
+#Spielerdeck .Karte, #Gegnerdeck .Karte {
     display: inline-block;
     margin-left: 5%;
     margin-right: 5%;
     margin-top:0.5em;
     }
 
-#Ablagestapel .Spielkarte{
+#Ablagestapel .Karte{
     margin-top: 0em;
 }
 
-.Spielkarte .Verdeckt {
+.Karte .Verdeckt {
     background-color: rgb(194, 13, 43);
 }
 
-#Kartenstapel .Spielkarte {
+#Kartenstapel .Karte {
     margin-top: 0em;
 }
 
