@@ -69,9 +69,6 @@ function KarteLegen(karte :Karte, index: number){
        updateHTML("Ablagestapel");
        Gegnerzug();
    }
-   if(HandkartenSpieler.length == 0){
-       alert("Gewonnen!");
-   }
 }
 
 function KarteNehmen(){
@@ -123,7 +120,11 @@ for (let i=0; i<array.length;i++){
     }
 }
 return passendeKarte;
+if(HandkartenSpieler.length == 0){
+    alert("Gewonnen!");
 }
+}
+
 
 function updateHTML(Zielort :string){
 ClearHTML(Zielort);

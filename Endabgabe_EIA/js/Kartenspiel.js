@@ -99,6 +99,9 @@ function checkKarten(array) {
         }
     }
     return passendeKarte;
+    if (HandkartenSpieler.length == 0) {
+        alert("Gewonnen!");
+    }
 }
 function updateHTML(Zielort) {
     ClearHTML(Zielort);
@@ -149,15 +152,6 @@ function KartenGenerierung() {
         }
     }
     console.log(Kartenstapel);
-}
-function gewinnen() {
-    if (HandkartenSpieler.anzahl == 0) {
-        alert("Gewonnen!");
-        return (true);
-    }
-    else {
-        return (false);
-    }
 }
 function shuffle(array) {
     let currentIndex = array.length;
