@@ -143,7 +143,6 @@ function ErstellungKarten() {
             Kartenstapel.push(NewKarte);
         }
     }
-    console.log(Kartenstapel);
 }
 function mischen(array) {
     let currentIndex = array.length;
