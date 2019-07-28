@@ -160,15 +160,15 @@ for(let i = 1; i <= 8; i++){
        }
 
        else if (j == 2){
-           Farbe = "Rot"
-       }
-
-       else if (j == 3){
            Farbe = "Gelb"
        }
 
-       else if ( j == 4){
+       else if (j == 3){
            Farbe = "Grün"
+       }
+
+       else if ( j == 4){
+           Farbe = "Rot"
        }    
 
         let NewKarte: Karte = {

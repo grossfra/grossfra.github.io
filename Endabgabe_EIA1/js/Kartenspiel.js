@@ -131,13 +131,13 @@ function ErstellungKarten() {
                 Farbe = "Blau";
             }
             else if (j == 2) {
-                Farbe = "Rot";
-            }
-            else if (j == 3) {
                 Farbe = "Gelb";
             }
-            else if (j == 4) {
+            else if (j == 3) {
                 Farbe = "Grün";
+            }
+            else if (j == 4) {
+                Farbe = "Rot";
             }
             let NewKarte = {
                 Farbe: Farbe,
