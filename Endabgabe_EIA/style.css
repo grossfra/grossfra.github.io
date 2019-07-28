@@ -11,21 +11,9 @@ div{
     margin-top:5%;
 }
 .Karte{ 
-    width:100px;
     height:150px;
-    float: left;
-    margin:10px;
-    border-radius: 10px;
-    border-color: #fff;
-    border-width: 5px;
+    width:75px;
     border-style: solid;
-    color:#fff;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2.5em;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 5px 10px 15px #333; 
 }
 
 #Spielerdeck .Karte, #Gegnerdeck .Karte {
