@@ -5,7 +5,7 @@ header {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 body {
-    background-color: peru;
+    background-color: rgb(172, 117, 62);
 }
 div{ 
     background-color: rgb(24, 21, 21);
@@ -31,7 +31,7 @@ div{
 }
 
 .Karte .Verdeckt {
-    background-color: rgb(24, 21, 21);
+    background-color: rgb(47, 41, 41);
 }
 
 #Kartenstapel .Karte {
@@ -47,20 +47,20 @@ div{
 }
 
 .Blau {
-    background-color: blue;
+    background-color: rgb(65, 65, 219);
 }
 .Rot{
-    background-color: red;
+    background-color: rgb(233, 59, 59);
 }
 .Grün{
-    background-color: green;
+    background-color: rgb(56, 175, 56);
 }
 .Gelb{
-    background-color: yellow;
+    background-color: rgb(231, 231, 47);
 }
 
 #HandkartenGegner{ 
-    background-color: wheat;
+    background-color: rgb(251, 238, 212);
     height:250px;
     width:100%;
     clear:both;
@@ -84,7 +84,7 @@ div{
 }
 
 #HandkartenSpieler{
-    background-color: wheat;
+    background-color: rgb(251, 238, 212);
     height:250px;
     width:100%;
     clear:both;
