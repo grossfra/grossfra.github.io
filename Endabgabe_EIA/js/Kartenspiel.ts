@@ -69,6 +69,9 @@ function KarteLegen(karte :Karte, index: number){
        updateHTML("Ablagestapel");
        Gegnerzug();
    }
+   if(HandkartenSpieler.length == 0){
+       alert("Gewonnen!");
+   }
 }
 
 function KarteNehmen(){
@@ -179,15 +182,7 @@ for(let i = 1; i <= 8; i++){
 }
 console.log(Kartenstapel);
 }
-function gewinnen(): boolean {
-    if (HandkartenSpieler.anzahl == 0) {
-        alert("Gewonnen!")
-        return (true)
-    }
-    else {
-        return (false)
-    }
-}
+
 function shuffle(array : Karte[]){
 let currentIndex = array.length;
 let temporaryValue;
