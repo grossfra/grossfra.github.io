@@ -156,20 +156,16 @@ let Farbe: string;
 for(let i = 1; i <= 8; i++){
     for(let j = 1; j <= 4; j++){
        if (j == 1){
-           Farbe = "Blau"  
-       }
+           Farbe = "Blau"}
+           
+        else if (j == 2){
+           Farbe = "Gelb"}
 
-       else if (j == 2){
-           Farbe = "Gelb"
-       }
+        else if (j == 3){
+           Farbe = "Grün"}
 
-       else if (j == 3){
-           Farbe = "Grün"
-       }
-
-       else if ( j == 4){
-           Farbe = "Rot"
-       }    
+        else if ( j == 4){
+           Farbe = "Rot"}    
 
         let NewKarte: Karte = {
             Farbe: Farbe,
