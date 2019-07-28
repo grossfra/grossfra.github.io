@@ -15,10 +15,9 @@ window.onload = function (){
 
 function GamePlay (){
     KartenGenerierung();
-    Kartenstapel = shuffle(Kartenstapel); //Karten werden gemischt
+    Kartenstapel = shuffle(Kartenstapel); //Mischen
 
-    //Spielerkarten werden verteilt:
-    for (let i = 0; i < 5; i++){
+    for (let i = 0; i < 5; i++){                  //Verteilung Handkarten Spieler
         HandkartenSpieler.push(Kartenstapel[i]);
         HandkartenGegner.push(Kartenstapel[i+5]);
     }
@@ -83,8 +82,7 @@ function KarteNehmen(){
    }
 }
 
-function Gegnerzug(){
-   //Wenn Gegner nicht legen kann, nimmt er Karte vom Kartenstapel
+function Gegnerzug(){      //Gegner legt Karte; wenn keine passt, zieht er vom Kartenstapel
        let i = 0;
        for (i; i<HandkartenGegner.length;i++){
            if(HandkartenGegner[i].Farbe == Ablagestapel[Ablagestapel.length-1].Farbe || HandkartenGegner[i].Wertigkeit == Ablagestapel[Ablagestapel.length-1].Wertigkeit){
@@ -111,7 +109,7 @@ function Gegnerzug(){
 
 }
 
-function checkKarten(array :Karte[]) :boolean {
+function checkKarten(array :Karte[]) :boolean {    //Prüfung, ob Karte legbar ist
 let passendeKarte : boolean = false;
 for (let i=0; i<array.length;i++){
     if(array[i].Farbe == Ablagestapel[Ablagestapel.length-1].Farbe || array[i].Wertigkeit == Ablagestapel[Ablagestapel.length-1].Wertigkeit){
@@ -120,9 +118,6 @@ for (let i=0; i<array.length;i++){
     }
 }
 return passendeKarte;
-if(HandkartenSpieler.length == 0){
-    alert("Gewonnen!");
-}
 }
 
 
@@ -184,7 +179,7 @@ for(let i = 1; i <= 8; i++){
 console.log(Kartenstapel);
 }
 
-function shuffle(array : Karte[]){
+function shuffle(array : Karte[]){    //erneutes Mischen
 let currentIndex = array.length;
 let temporaryValue;
 let randomIndex;
