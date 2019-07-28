@@ -1,7 +1,7 @@
-let Kartenstapel = [];
-let Ablagestapel = [];
 let HandkartenGegner = [];
 let HandkartenSpieler = [];
+let Kartenstapel = [];
+let Ablagestapel = [];
 window.onload = function () {
     document.getElementById("Kartenstapel").addEventListener("click", KarteNehmen, false);
     GamePlay();

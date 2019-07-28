@@ -3,10 +3,10 @@ interface Karte {
     Wertigkeit: number;
 }
 
-let Kartenstapel: Karte[] = [];
-let Ablagestapel: Karte[] = [];
 let HandkartenGegner: Karte [] = [];
 let HandkartenSpieler: Karte [] = [];
+let Kartenstapel: Karte[] = [];
+let Ablagestapel: Karte[] = [];
 
 window.onload = function (){
     document.getElementById("Kartenstapel").addEventListener("click",KarteNehmen,false);
