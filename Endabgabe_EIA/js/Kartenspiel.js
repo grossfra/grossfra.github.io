@@ -48,6 +48,9 @@ function KarteLegen(karte, index) {
         updateHTML("HandkartenSpieler");
         updateHTML("Ablagestapel");
         ZugGegner();
+        if (HandkartenSpieler.length == 0) {
+            alert("Gewonnen!");
+        }
     }
 }
 function KarteZiehen() {

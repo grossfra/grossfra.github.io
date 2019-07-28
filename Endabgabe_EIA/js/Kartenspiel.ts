@@ -64,6 +64,9 @@ function KarteLegen(karte :Karte, index: number){
        updateHTML("HandkartenSpieler");
        updateHTML("Ablagestapel");
        ZugGegner();
+       if (HandkartenSpieler.length==0){
+        alert("Gewonnen!");                          
+    }
    }
 }
 
