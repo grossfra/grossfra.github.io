@@ -50,7 +50,7 @@ function KarteHTML (karte:Karte, Zielort: string, index : number){
      Wertigkeit.setAttribute ("class", "Wertigkeit");
      Wertigkeit.innerHTML = "" + karte.Wertigkeit;
      holdingDiv.appendChild(Wertigkeit);
-     if (Zielort == "Spielerdeck"){
+     if (Zielort == "HandkartenSpieler"){
         holdingDiv.addEventListener("click", function() {KarteLegen(karte, index)}, false);
     }
 }
