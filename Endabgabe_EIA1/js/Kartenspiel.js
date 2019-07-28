@@ -36,11 +36,6 @@ function KarteHTML(karte, Zielort, index) {
         holdingDiv.addEventListener("click", function () { KarteLegen(karte, index); }, false);
     }
 }
-function verdeckteKarte(karte, Zielort, index) {
-    let holdingDiv = document.createElement("div");
-    holdingDiv.setAttribute("class", "Karte" + " " + "Verdeckt");
-    document.getElementById(Zielort).appendChild(holdingDiv);
-}
 function KarteZiehen() {
     if (KartenPrüfung(HandkartenSpieler) == false) {
         HandkartenSpieler.push(Kartenstapel[Kartenstapel.length - 1]);
@@ -87,6 +82,11 @@ function ZugGegner() {
             updateHTML("HandkartenGegner");
         }
     }
+}
+function verdeckteKarte(karte, Zielort, index) {
+    let holdingDiv = document.createElement("div");
+    holdingDiv.setAttribute("class", "Karte" + " " + "Verdeckt");
+    document.getElementById(Zielort).appendChild(holdingDiv);
 }
 function KartenPrüfung(array) {
     let passendeKarte = false;

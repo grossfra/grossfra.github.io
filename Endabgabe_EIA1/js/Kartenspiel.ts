@@ -51,12 +51,6 @@ function KarteHTML (karte:Karte, Zielort: string, index : number){
     }
 }
 
-function verdeckteKarte(karte: Karte, Zielort: string, index: number) {
-   let holdingDiv: HTMLElement = document.createElement("div");
-   holdingDiv.setAttribute("class", "Karte" + " " + "Verdeckt");
-   document.getElementById(Zielort).appendChild(holdingDiv);
-}
-
 function KarteZiehen(){
     if(KartenPrüfung(HandkartenSpieler)==false){
         HandkartenSpieler.push(Kartenstapel[Kartenstapel.length - 1]);
@@ -108,6 +102,12 @@ function ZugGegner(){      //Gegner legt Karte; wenn keine passt, zieht er vom K
         }
     }
 }
+
+function verdeckteKarte(karte: Karte, Zielort: string, index: number) {
+    let holdingDiv: HTMLElement = document.createElement("div");
+    holdingDiv.setAttribute("class", "Karte" + " " + "Verdeckt");
+    document.getElementById(Zielort).appendChild(holdingDiv);
+ }
 
 function KartenPrüfung(array :Karte[]) :boolean {    //Prüfung, ob Karte legbar ist
 let passendeKarte : boolean = false;
