@@ -51,7 +51,7 @@ function KarteHTML (karte:Karte, Zielort: string, index : number){
     }
 }
 
-function KarteZiehen(){                             //neue Karte wird gezogen
+function KarteZiehen(){                             //neue Karte ziehen
     if(KartenPrüfung(HandkartenSpieler)==false){
         HandkartenSpieler.push(Kartenstapel[Kartenstapel.length - 1]);
         Kartenstapel.splice(Kartenstapel.length -1, 1);
