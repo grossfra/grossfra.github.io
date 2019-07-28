@@ -8,11 +8,6 @@ let HandkartenSpieler: Karte [] = [];
 let Kartenstapel: Karte[] = [];
 let Ablagestapel: Karte[] = [];
 
-window.onload = function (){
-    document.getElementById("Kartenstapel").addEventListener("click",KarteZiehen,false);
-     Spielablauf();   
-}
-
 function Spielablauf (){
     ErstellungKarten();
     Kartenstapel = mischen(Kartenstapel); //Mischen
@@ -36,6 +31,12 @@ function Spielablauf (){
     KarteHTML(Ablagestapel[Ablagestapel.length - 1], "Ablagestapel",Ablagestapel.length-1);
     verdeckteKarte(Kartenstapel[Kartenstapel.length -1], "Kartenstapel",Kartenstapel.length-1);
 }
+
+window.onload = function (){
+    document.getElementById("Kartenstapel").addEventListener("click",KarteZiehen,false);
+     Spielablauf();   
+}
+
 function KarteHTML (karte:Karte, Zielort: string, index : number){
      let holdingDiv: HTMLElement = document.createElement ("div");
      holdingDiv.setAttribute("class", "Karte"  + " " + karte.Farbe);
