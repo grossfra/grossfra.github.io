@@ -74,7 +74,6 @@ div{
 #Kartenstapel{
     height:100px;
     width:75px;
-    float:left;
     margin-bottom: 6%;
     margin-left: 20%;
 }
@@ -82,7 +81,6 @@ div{
 #Ablagestapel{
     height:100px;
     width:75px;
-    float:left;
     margin-bottom: 6%;
     margin-left: 20%;
 }
