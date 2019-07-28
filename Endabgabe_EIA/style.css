@@ -11,9 +11,10 @@ div{
     margin-top:5%;
 }
 .Karte{ 
-    height:130px;
+    height:138px;
     width:90px;
     border-style: solid;
+    border-radius: 18px;
 }
 
 #Spielerdeck .Karte, #Gegnerdeck .Karte {
