@@ -6,7 +6,7 @@ body {
     background-color: brown;
 }
 div{ 
-    background-color: rosybrown;
+    background-color: darkgrey;
     margin-bottom:20%;
     margin-top:5%;
 }
@@ -29,7 +29,7 @@ div{
 }
 
 .Karte .Verdeckt {
-    background-color: darkgray;
+    background-color: darkgrey;
 }
 
 #Kartenstapel .Karte {
