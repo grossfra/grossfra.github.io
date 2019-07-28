@@ -59,14 +59,14 @@ div{
 
 #HandkartenGegner{ 
     background-color: wheat;
-    height:300px;
+    height:250px;
     width:100%;
     clear:both;
-    margin-bottom: -1%;
+    margin-bottom: -3%;
 }
 
 #Kartenstapel{
-    height:150px;
+    height:100px;
     width:75px;
     float:left;
     margin-bottom: 6%;
@@ -75,7 +75,7 @@ div{
 }
 
 #Ablagestapel{
-    height:150px;
+    height:100px;
     width:75px;
     float:left;
     margin-bottom: 6%;
@@ -85,7 +85,7 @@ div{
 
 #HandkartenSpieler{
     background-color: wheat;
-    height:200px;
+    height:250px;
     width:100%;
     clear:both;
     margin-bottom: -75%;
