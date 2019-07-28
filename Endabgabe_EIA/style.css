@@ -50,6 +50,7 @@ div{
 .Kartenzahl {
     color: black;
     margin-left:30%;
+    padding-top: -2em;
     font-size: 2em;
     
 }
