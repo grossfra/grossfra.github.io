@@ -1,12 +1,12 @@
 interface Karte {
-    Wertigkeit: number
+    Wertigkeit: number;
     Farbe: string;
 }
 
 let HandkartenGegner: Karte [] = [];
 let HandkartenSpieler: Karte [] = [];
-let Kartenstapel: Karte[] = [];
-let Ablagestapel: Karte[] = [];
+let Kartenstapel: Karte [] = [];
+let Ablagestapel: Karte [] = [];
 
 function Spielablauf (){
     ErstellungKarten();
@@ -77,6 +77,7 @@ function KarteZiehen(){
        updateHTML("HandkartenSpieler");
        updateHTML("Kartenstapel");
    }
+
    if(KartenPrüfung(HandkartenSpieler)==false){
        ZugGegner();
    }
@@ -93,6 +94,7 @@ function ZugGegner(){      //Gegner legt Karte; wenn keine passt, zieht er vom K
                break;
            }
        }
+
        if (i >= HandkartenGegner.length){
         HandkartenGegner.push(Kartenstapel[Kartenstapel.length-1]);
         Kartenstapel.splice(Kartenstapel.length-1,1);
@@ -105,8 +107,6 @@ function ZugGegner(){      //Gegner legt Karte; wenn keine passt, zieht er vom K
             updateHTML("HandkartenGegner"); 
         }
     }
-
-
 }
 
 function KartenPrüfung(array :Karte[]) :boolean {    //Prüfung, ob Karte legbar ist
@@ -117,9 +117,9 @@ for (let i=0; i<array.length;i++){
         break;
     }
 }
+
 return passendeKarte;
 }
-
 
 function updateHTML(Zielort :string){
 ClearHTML(Zielort);
@@ -128,14 +128,17 @@ if (Zielort =="HandkartenSpieler"){
         KarteHTML(HandkartenSpieler[i],"HandkartenSpieler",i);
     }
 }
+
 if (Zielort == "HandkartenGegner"){
     for(let i = 0; i < HandkartenGegner.length; i++){
         verdeckteKarte(HandkartenGegner [i], "HandkartenGegner",i);
     }
 }
+
 if (Zielort == "Ablagestapel"){
     KarteHTML(Ablagestapel[Ablagestapel.length - 1], "Ablagestapel",Ablagestapel.length-1);
 }
+
 if (Zielort == "Kartenstapel"){
     verdeckteKarte(Kartenstapel[Kartenstapel.length-1], "Kartenstapel",Kartenstapel.length-1);
 }
@@ -155,19 +158,24 @@ for(let i = 1; i <= 8; i++){
        if (j == 1){
            Farbe = "Blau"  
        }
+
        else if (j == 2){
            Farbe = "Rot"
        }
+
        else if (j == 3){
            Farbe = "Gelb"
        }
+
        else if ( j == 4){
            Farbe = "Grün"
        }    
+
         let NewKarte: Karte = {
             Farbe: Farbe,
             Wertigkeit: i
         }
+
         Kartenstapel.push(NewKarte);
     }
 }
@@ -185,5 +193,6 @@ while (currentIndex != 0){
     array[currentIndex] = array[randomIndex];
     array[randomIndex] = temporaryValue;
 }
+
 return array;
 }
