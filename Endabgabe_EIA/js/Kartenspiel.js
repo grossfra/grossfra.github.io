@@ -151,7 +151,7 @@ function KartenGenerierung() {
     console.log(Kartenstapel);
 }
 function gewinnen() {
-    if (this.HandkartenSpieler == 0) {
+    if (HandkartenSpieler.anzahl == 0) {
         alert("Gewonnen!");
         return (true);
     }

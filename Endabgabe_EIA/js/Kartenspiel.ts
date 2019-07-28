@@ -180,7 +180,7 @@ for(let i = 1; i <= 8; i++){
 console.log(Kartenstapel);
 }
 function gewinnen(): boolean {
-    if (this.HandkartenSpieler == 0) {
+    if (HandkartenSpieler.anzahl == 0) {
         alert("Gewonnen!")
         return (true)
     }
