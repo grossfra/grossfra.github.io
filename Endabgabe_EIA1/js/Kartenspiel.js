@@ -41,6 +41,17 @@ function verdeckteKarte(karte, Zielort, index) {
     holdingDiv.setAttribute("class", "Karte" + " " + "Verdeckt");
     document.getElementById(Zielort).appendChild(holdingDiv);
 }
+function KarteZiehen() {
+    if (KartenPrüfung(HandkartenSpieler) == false) {
+        HandkartenSpieler.push(Kartenstapel[Kartenstapel.length - 1]);
+        Kartenstapel.splice(Kartenstapel.length - 1, 1);
+        updateHTML("HandkartenSpieler");
+        updateHTML("Kartenstapel");
+    }
+    if (KartenPrüfung(HandkartenSpieler) == false) {
+        ZugGegner();
+    }
+}
 function KarteLegen(karte, index) {
     if (karte.Farbe == Ablagestapel[Ablagestapel.length - 1].Farbe || karte.Wertigkeit == Ablagestapel[Ablagestapel.length - 1].Wertigkeit) {
         Ablagestapel.push(karte);
@@ -51,17 +62,6 @@ function KarteLegen(karte, index) {
         if (HandkartenSpieler.length == 0) {
             alert("Gewonnen!");
         }
-    }
-}
-function KarteZiehen() {
-    if (KartenPrüfung(HandkartenSpieler) == false) {
-        HandkartenSpieler.push(Kartenstapel[Kartenstapel.length - 1]);
-        Kartenstapel.splice(Kartenstapel.length - 1, 1);
-        updateHTML("HandkartenSpieler");
-        updateHTML("Kartenstapel");
-    }
-    if (KartenPrüfung(HandkartenSpieler) == false) {
-        ZugGegner();
     }
 }
 function ZugGegner() {
