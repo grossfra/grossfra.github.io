@@ -13,7 +13,7 @@ div{
 .Karte{ 
     height:150px;
     width:75px;
-    border-style: dashed; 
+    border-style: groove; 
 }
 
 #Spielerdeck .Karte, #Gegnerdeck .Karte {
@@ -36,32 +36,32 @@ div{
 }
 
 .Kartenzahl {
-    color: white;
+    color: black;
     margin-left:30%;
     padding: 10%;
     padding-top: 0.8em;
-    font-size: 2em;
+    font-size: 3em;
     
 }
 
 .Blau {
-    background-color:rgb(31, 150, 230);
+    background-color: blue;
 }
 
 .Rot{
-    background-color: rgb(209, 64, 64);
+    background-color: red;
 }
 
 .Grün{
-    background-color: rgb(67, 165, 67);
+    background-color: green;
 }
 
 .Gelb{
-    background-color:rgb(243, 243, 118);
+    background-color: yellow;
 }
 
 #Gegnerdeck{ 
-    background-color:rgb(20, 165, 158);
+    background-color: wheat;
     height:200px;
     width:100%;
     clear:both;
@@ -89,7 +89,7 @@ div{
 }
 
 #Spielerdeck{
-    background-color:rgb(230, 107, 124);
+    background-color: wheat;
     height:200px;
     width:100%;
     clear:both;
