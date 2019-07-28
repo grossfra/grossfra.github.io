@@ -22,6 +22,14 @@ div{
     border-width: 3px;
 }
 
+.Wertigkeit {
+    color: black;
+    margin-left:24%;
+    padding-top: -3em;
+    font-size: 4em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 #HandkartenSpieler .Karte, #HandkartenGegner .Karte {
     display: inline-block;
     margin-left: 5%;
@@ -39,14 +47,6 @@ div{
 
 #Kartenstapel .Karte {
     margin-top: 0em;
-}
-
-.Wertigkeit {
-    color: black;
-    margin-left:24%;
-    padding-top: -3em;
-    font-size: 4em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .Blau {
