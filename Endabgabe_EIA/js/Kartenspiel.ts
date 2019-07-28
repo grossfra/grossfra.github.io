@@ -1,6 +1,6 @@
 interface Karte {
+    Wertigkeit: number
     Farbe: string;
-    Wertigkeit: number;
 }
 
 let HandkartenGegner: Karte [] = [];
