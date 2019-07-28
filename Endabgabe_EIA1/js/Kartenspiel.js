@@ -54,8 +54,8 @@ function KarteLegen(karte, index) {
         updateHTML("HandkartenSpieler");
         updateHTML("Ablagestapel");
         ZugGegner();
-        if (HandkartenSpieler.length == 0) {
-            alert("Gewonnen!");
+        if (HandkartenSpieler.length == 0) { //Spieler bekommt Nachricht, wenn er alle Karten losgeworden ist
+            alert("Glückwunsch - du hast gewonnen!");
         }
     }
 }
