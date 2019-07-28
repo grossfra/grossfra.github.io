@@ -20,10 +20,10 @@ function GamePlay() {
     console.log(HandkartenGegner);
     console.log(Kartenstapel);
     for (let i = 0; i < HandkartenSpieler.length; i++) {
-        KarteHTML(HandkartenSpieler[i], "Spielerdeck", i);
+        KarteHTML(HandkartenSpieler[i], "HandkartenSpieler", i);
     }
     for (let i = 0; i < HandkartenGegner.length; i++) {
-        KarteVerdeckt(HandkartenGegner[i], "Gegnerdeck", i);
+        KarteVerdeckt(HandkartenGegner[i], "HandkartenGegner", i);
     }
     KarteHTML(Ablagestapel[Ablagestapel.length - 1], "Ablagestapel", Ablagestapel.length - 1);
     KarteVerdeckt(Kartenstapel[Kartenstapel.length - 1], "Kartenstapel", Kartenstapel.length - 1);
