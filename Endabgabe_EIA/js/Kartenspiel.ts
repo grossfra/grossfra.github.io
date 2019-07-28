@@ -10,7 +10,7 @@ let Ablagestapel: Karte[] = [];
 
 window.onload = function() {
     document.getElementById("KarteZiehen").addEventListener("click", KarteZiehen, false);
-     
+     Spielablauf();   
 }
 
 function Spielablauf (){
