@@ -49,7 +49,7 @@ function KarteLegen(karte, index) {
     if (karte.Farbe == Ablagestapel[Ablagestapel.length - 1].Farbe || karte.Wertigkeit == Ablagestapel[Ablagestapel.length - 1].Wertigkeit) {
         Ablagestapel.push(karte);
         HandkartenSpieler.splice(index, 1);
-        updateHTML("Spielerdeck");
+        updateHTML("HandkartenSpieler");
         updateHTML("Ablagestapel");
         Gegnerzug();
     }
@@ -58,7 +58,7 @@ function KarteNehmen() {
     if (checkKarten(HandkartenSpieler) == false) {
         HandkartenSpieler.push(Kartenstapel[Kartenstapel.length - 1]);
         Kartenstapel.splice(Kartenstapel.length - 1, 1);
-        updateHTML("Spielerdeck");
+        updateHTML("HandkartenSpieler");
         updateHTML("Kartenstapel");
     }
     if (checkKarten(HandkartenSpieler) == false) {
@@ -73,20 +73,20 @@ function Gegnerzug() {
             Ablagestapel.push(HandkartenGegner[i]);
             HandkartenGegner.splice(i, 1);
             updateHTML("Ablagestapel");
-            updateHTML("Gegnerdeck");
+            updateHTML("HandkartenGegner");
             break;
         }
     }
     if (i >= HandkartenGegner.length) {
         HandkartenGegner.push(Kartenstapel[Kartenstapel.length - 1]);
         Kartenstapel.splice(Kartenstapel.length - 1, 1);
-        updateHTML("Gegnerdeck");
+        updateHTML("HandkartenGegner");
         updateHTML("Kartenstapel");
         if (HandkartenGegner[HandkartenGegner.length - 1].Farbe == Ablagestapel[Ablagestapel.length - 1].Farbe || HandkartenGegner[HandkartenGegner.length - 1].Wertigkeit == Ablagestapel[Ablagestapel.length - 1].Wertigkeit) {
             Ablagestapel.push(HandkartenGegner[HandkartenGegner.length - 1]);
             HandkartenGegner.splice(HandkartenGegner.length - 1, 1);
             updateHTML("Ablagestapel");
-            updateHTML("Gegnerdeck");
+            updateHTML("HandkartenGegner");
         }
     }
 }
@@ -102,14 +102,14 @@ function checkKarten(array) {
 }
 function updateHTML(Zielort) {
     ClearHTML(Zielort);
-    if (Zielort == "Spielerdeck") {
+    if (Zielort == "HandkartenSpieler") {
         for (let i = 0; i < HandkartenSpieler.length; i++) {
-            KarteHTML(HandkartenSpieler[i], "Spielerdeck", i);
+            KarteHTML(HandkartenSpieler[i], "HandkartenSpieler", i);
         }
     }
-    if (Zielort == "Gegnerdeck") {
+    if (Zielort == "HandkartenGegner") {
         for (let i = 0; i < HandkartenGegner.length; i++) {
-            KarteVerdeckt(HandkartenGegner[i], "Gegnerdeck", i);
+            KarteVerdeckt(HandkartenGegner[i], "HandkartenGegner", i);
         }
     }
     if (Zielort == "Ablagestapel") {
