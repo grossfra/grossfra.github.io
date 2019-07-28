@@ -46,10 +46,10 @@ function KarteHTML (karte:Karte, Zielort: string, index : number){
      holdingDiv.setAttribute("class", "Karte"  + " " + karte.Farbe);
      document.getElementById(Zielort).appendChild(holdingDiv);
 
-     let Zahl: HTMLElement = document.createElement ("p");
-     Zahl.setAttribute ("class", "Kartenzahl");
-     Zahl.innerHTML = "" + karte.Wertigkeit;
-     holdingDiv.appendChild(Zahl);
+     let Wertigkeit: HTMLElement = document.createElement ("p");
+     Wertigkeit.setAttribute ("class", "Wertigkeit");
+     Wertigkeit.innerHTML = "" + karte.Wertigkeit;
+     holdingDiv.appendChild(Wertigkeit);
      if (Zielort == "Spielerdeck"){
         holdingDiv.addEventListener("click", function() {KarteLegen(karte, index)}, false);
     }

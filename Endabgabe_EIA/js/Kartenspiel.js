@@ -32,10 +32,10 @@ function KarteHTML(karte, Zielort, index) {
     let holdingDiv = document.createElement("div");
     holdingDiv.setAttribute("class", "Karte" + " " + karte.Farbe);
     document.getElementById(Zielort).appendChild(holdingDiv);
-    let Zahl = document.createElement("p");
-    Zahl.setAttribute("class", "Kartenzahl");
-    Zahl.innerHTML = "" + karte.Wertigkeit;
-    holdingDiv.appendChild(Zahl);
+    let Wertigkeit = document.createElement("p");
+    Wertigkeit.setAttribute("class", "Wertigkeit");
+    Wertigkeit.innerHTML = "" + karte.Wertigkeit;
+    holdingDiv.appendChild(Wertigkeit);
     if (Zielort == "Spielerdeck") {
         holdingDiv.addEventListener("click", function () { KarteLegen(karte, index); }, false);
     }
