@@ -148,23 +148,18 @@ function ErstellungKarten (){
 let Farbe: string;
 for(let i = 1; i <= 8; i++){
     for(let j = 1; j <= 4; j++){
-      
        if (j == 1){
            Farbe = "Blau"  
        }
-
        else if (j == 2){
            Farbe = "Rot"
        }
-
        else if (j == 3){
            Farbe = "Gelb"
        }
-
        else if ( j == 4){
            Farbe = "Grün"
-       }
-            
+       }    
         let NewKarte: Karte = {
             Farbe: Farbe,
             Wertigkeit: i
@@ -172,7 +167,6 @@ for(let i = 1; i <= 8; i++){
         Kartenstapel.push(NewKarte);
     }
 }
-console.log(Kartenstapel);
 }
 
 function mischen(array : Karte[]){    //erneutes Mischen
