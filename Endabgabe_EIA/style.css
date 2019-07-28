@@ -6,7 +6,7 @@ body {
     background-color: brown;
 }
 div{ 
-    
+    background-color: black;
     margin-bottom:20%;
     margin-top:5%;
 }
@@ -28,9 +28,7 @@ div{
     margin-top: 0em;
 }
 
-.Karte .Verdeckt {
-    background-color: black;
-}
+
 
 #Kartenstapel .Karte {
     margin-top: 0em;
