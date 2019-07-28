@@ -27,7 +27,7 @@ div{
     margin-left:24%;
     padding-top: -5em;
     font-size: 4em;
-    font-family: monospace;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 #HandkartenSpieler .Karte, #HandkartenGegner .Karte {
