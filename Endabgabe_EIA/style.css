@@ -17,7 +17,7 @@ div{
     border-radius: 18px;
 }
 
-#Spielerdeck .Karte, #Gegnerdeck .Karte {
+#HandkartenSpieler .Karte, #HandkartenGegner .Karte {
     display: inline-block;
     margin-left: 5%;
     margin-right: 5%;
@@ -60,7 +60,7 @@ div{
     background-color: yellow;
 }
 
-#Gegnerdeck{ 
+#HandkartenGegner{ 
     background-color: wheat;
     height:200px;
     width:100%;
@@ -88,7 +88,7 @@ div{
     
 }
 
-#Spielerdeck{
+#HandkartenSpieler{
     background-color: wheat;
     height:200px;
     width:100%;
