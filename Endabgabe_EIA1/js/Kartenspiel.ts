@@ -51,7 +51,7 @@ function KarteHTML (karte:Karte, Zielort: string, index : number){
     }
 }
 
-function KarteZiehen(){
+function KarteZiehen(){                             //neue Karte wird gezogen
     if(KartenPrüfung(HandkartenSpieler)==false){
         HandkartenSpieler.push(Kartenstapel[Kartenstapel.length - 1]);
         Kartenstapel.splice(Kartenstapel.length -1, 1);
@@ -59,12 +59,12 @@ function KarteZiehen(){
         updateHTML("Kartenstapel");
     }
  
-    if(KartenPrüfung(HandkartenSpieler)==false){
+    if(KartenPrüfung(HandkartenSpieler)==false){    
         ZugGegner();
     }
  }
 
-function KarteLegen(karte :Karte, index: number){
+function KarteLegen(karte :Karte, index: number){        //Karte wird abgelegt 
    if(karte.Farbe == Ablagestapel[Ablagestapel.length-1].Farbe || karte.Wertigkeit ==Ablagestapel[Ablagestapel.length-1].Wertigkeit){
        Ablagestapel.push(karte);
        HandkartenSpieler.splice(index, 1);
@@ -151,7 +151,7 @@ while (Element.firstChild){
 }
 }
 
-function ErstellungKarten (){
+function ErstellungKarten (){        //Spielkarte wird erstellt mit Farbe und Wertigkeit  
 let Farbe: string;
 for(let i = 1; i <= 8; i++){
     for(let j = 1; j <= 4; j++){
@@ -181,7 +181,7 @@ for(let i = 1; i <= 8; i++){
 }
 }
 
-function mischen(array : Karte[]){    //erneutes Mischen
+function mischen(array : Karte[]){    //erneutes Mischen der Karten  
 let currentIndex = array.length;
 let temporaryValue;
 let randomIndex;
