@@ -75,7 +75,7 @@ div{
 }
 
 #Ablagestapel{
-    box-shadow: 10px 20px 30px grey;
+    box-shadow: 10px 10px 10px grey;
     height:150px;
     width:75px;
     float:left;
