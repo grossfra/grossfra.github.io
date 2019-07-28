@@ -9,7 +9,7 @@ let Kartenstapel: Karte[] = [];
 let Ablagestapel: Karte[] = [];
 
 window.onload = function (){
-    document.getElementById("Kartenstapel").addEventListener("click",KarteNehmen,false);
+    document.getElementById("Kartenstapel").addEventListener("click",KarteZiehen,false);
      Spielablauf();   
 }
 
@@ -66,7 +66,7 @@ function KarteLegen(karte :Karte, index: number){
    }
 }
 
-function KarteNehmen(){
+function KarteZiehen(){
    if(checkKarten(HandkartenSpieler)==false){
        HandkartenSpieler.push(Kartenstapel[Kartenstapel.length - 1]);
        Kartenstapel.splice(Kartenstapel.length -1, 1);

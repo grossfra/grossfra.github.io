@@ -3,7 +3,7 @@ let HandkartenSpieler = [];
 let Kartenstapel = [];
 let Ablagestapel = [];
 window.onload = function () {
-    document.getElementById("Kartenstapel").addEventListener("click", KarteNehmen, false);
+    document.getElementById("Kartenstapel").addEventListener("click", KarteZiehen, false);
     Spielablauf();
 };
 function Spielablauf() {
@@ -50,7 +50,7 @@ function KarteLegen(karte, index) {
         Gegnerzug();
     }
 }
-function KarteNehmen() {
+function KarteZiehen() {
     if (checkKarten(HandkartenSpieler) == false) {
         HandkartenSpieler.push(Kartenstapel[Kartenstapel.length - 1]);
         Kartenstapel.splice(Kartenstapel.length - 1, 1);
