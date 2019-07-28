@@ -10,12 +10,12 @@ let Ablagestapel: Karte[] = [];
 
 window.onload = function (){
     document.getElementById("Kartenstapel").addEventListener("click",KarteNehmen,false);
-     GamePlay();   
+     Spielablauf();   
 }
 
-function GamePlay (){
-    KartenGenerierung();
-    Kartenstapel = shuffle(Kartenstapel); //Mischen
+function Spielablauf (){
+    ErstellungKarten();
+    Kartenstapel = mischen(Kartenstapel); //Mischen
 
     for (let i = 0; i < 5; i++){                  //Verteilung Handkarten Spieler
         HandkartenSpieler.push(Kartenstapel[i]);
@@ -24,10 +24,6 @@ function GamePlay (){
 
     Ablagestapel.push(Kartenstapel[10]);
     Kartenstapel.splice(0,11);
-
-    console.log(HandkartenSpieler);
-    console.log (HandkartenGegner);
-    console.log (Kartenstapel);  
     
     for(let i = 0; i < HandkartenSpieler.length; i++) {
         KarteHTML(HandkartenSpieler[i],"HandkartenSpieler",i);
@@ -148,7 +144,7 @@ while (Element.firstChild){
 }
 }
 
-function KartenGenerierung (){
+function ErstellungKarten (){
 let Farbe: string;
 for(let i = 1; i <= 8; i++){
     for(let j = 1; j <= 4; j++){
@@ -179,7 +175,7 @@ for(let i = 1; i <= 8; i++){
 console.log(Kartenstapel);
 }
 
-function shuffle(array : Karte[]){    //erneutes Mischen
+function mischen(array : Karte[]){    //erneutes Mischen
 let currentIndex = array.length;
 let temporaryValue;
 let randomIndex;

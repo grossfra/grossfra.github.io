@@ -4,21 +4,17 @@ let Kartenstapel = [];
 let Ablagestapel = [];
 window.onload = function () {
     document.getElementById("Kartenstapel").addEventListener("click", KarteNehmen, false);
-    GamePlay();
+    Spielablauf();
 };
-function GamePlay() {
-    KartenGenerierung();
-    Kartenstapel = shuffle(Kartenstapel); //Karten werden gemischt
-    //Spielerkarten werden verteilt:
-    for (let i = 0; i < 5; i++) {
+function Spielablauf() {
+    ErstellungKarten();
+    Kartenstapel = mischen(Kartenstapel); //Mischen
+    for (let i = 0; i < 5; i++) { //Verteilung Handkarten Spieler
         HandkartenSpieler.push(Kartenstapel[i]);
         HandkartenGegner.push(Kartenstapel[i + 5]);
     }
     Ablagestapel.push(Kartenstapel[10]);
     Kartenstapel.splice(0, 11);
-    console.log(HandkartenSpieler);
-    console.log(HandkartenGegner);
-    console.log(Kartenstapel);
     for (let i = 0; i < HandkartenSpieler.length; i++) {
         KarteHTML(HandkartenSpieler[i], "HandkartenSpieler", i);
     }
@@ -66,7 +62,6 @@ function KarteNehmen() {
     }
 }
 function Gegnerzug() {
-    //Wenn Gegner nicht legen kann, nimmt er Karte vom Kartenstapel
     let i = 0;
     for (i; i < HandkartenGegner.length; i++) {
         if (HandkartenGegner[i].Farbe == Ablagestapel[Ablagestapel.length - 1].Farbe || HandkartenGegner[i].Wertigkeit == Ablagestapel[Ablagestapel.length - 1].Wertigkeit) {
@@ -99,9 +94,6 @@ function checkKarten(array) {
         }
     }
     return passendeKarte;
-    if (HandkartenSpieler.length == 0) {
-        alert("Gewonnen!");
-    }
 }
 function updateHTML(Zielort) {
     ClearHTML(Zielort);
@@ -128,7 +120,7 @@ function ClearHTML(Zielort) {
         Element.removeChild(Element.firstChild);
     }
 }
-function KartenGenerierung() {
+function ErstellungKarten() {
     let Farbe;
     for (let i = 1; i <= 8; i++) {
         for (let j = 1; j <= 4; j++) {
@@ -153,7 +145,7 @@ function KartenGenerierung() {
     }
     console.log(Kartenstapel);
 }
-function shuffle(array) {
+function mischen(array) {
     let currentIndex = array.length;
     let temporaryValue;
     let randomIndex;
