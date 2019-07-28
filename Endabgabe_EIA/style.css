@@ -31,7 +31,7 @@ div{
 }
 
 .Karte .Verdeckt {
-    background-color: rgb(47, 41, 41);
+    background-color: rgb(207, 151, 78);
 }
 
 #Kartenstapel .Karte {
@@ -60,7 +60,7 @@ div{
 }
 
 #HandkartenGegner{ 
-    background-color: rgb(251, 238, 212);
+    background-color: rgb(246, 224, 179);
     height:230px;
     width:100%;
     clear:both;
@@ -84,7 +84,7 @@ div{
 }
 
 #HandkartenSpieler{
-    background-color: rgb(251, 238, 212);
+    background-color: rgb(246, 224, 179);
     height:230px;
     width:100%;
     clear:both;
