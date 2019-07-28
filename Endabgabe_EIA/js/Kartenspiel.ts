@@ -179,7 +179,15 @@ for(let i = 1; i <= 8; i++){
 }
 console.log(Kartenstapel);
 }
-
+function gewinnen(): boolean {
+    if (this.HandkartenSpieler == 0) {
+        alert("Gewonnen!")
+        return (true)
+    }
+    else {
+        return (false)
+    }
+}
 function shuffle(array : Karte[]){
 let currentIndex = array.length;
 let temporaryValue;

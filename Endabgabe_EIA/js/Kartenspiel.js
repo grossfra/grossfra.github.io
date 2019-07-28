@@ -150,6 +150,15 @@ function KartenGenerierung() {
     }
     console.log(Kartenstapel);
 }
+function gewinnen() {
+    if (this.HandkartenSpieler == 0) {
+        alert("Gewonnen!");
+        return (true);
+    }
+    else {
+        return (false);
+    }
+}
 function shuffle(array) {
     let currentIndex = array.length;
     let temporaryValue;
