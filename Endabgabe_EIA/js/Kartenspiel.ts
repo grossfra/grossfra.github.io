@@ -30,11 +30,11 @@ function Spielablauf (){
     }
 
     for(let i = 0; i < HandkartenGegner.length; i++){
-        KarteVerdeckt(HandkartenGegner [i], "HandkartenGegner",i);
+        verdeckteKarte(HandkartenGegner [i], "HandkartenGegner",i);
     }
 
     KarteHTML(Ablagestapel[Ablagestapel.length - 1], "Ablagestapel",Ablagestapel.length-1);
-    KarteVerdeckt(Kartenstapel[Kartenstapel.length -1], "Kartenstapel",Kartenstapel.length-1);
+    verdeckteKarte(Kartenstapel[Kartenstapel.length -1], "Kartenstapel",Kartenstapel.length-1);
 }
 function KarteHTML (karte:Karte, Zielort: string, index : number){
      let holdingDiv: HTMLElement = document.createElement ("div");
@@ -50,7 +50,7 @@ function KarteHTML (karte:Karte, Zielort: string, index : number){
     }
 }
 
-function KarteVerdeckt(karte: Karte, Zielort: string, index: number) {
+function verdeckteKarte(karte: Karte, Zielort: string, index: number) {
    let holdingDiv: HTMLElement = document.createElement("div");
    holdingDiv.setAttribute("class", "Karte" + " " + "Verdeckt");
    document.getElementById(Zielort).appendChild(holdingDiv);
@@ -62,23 +62,23 @@ function KarteLegen(karte :Karte, index: number){
        HandkartenSpieler.splice(index, 1);
        updateHTML("HandkartenSpieler");
        updateHTML("Ablagestapel");
-       Gegnerzug();
+       ZugGegner();
    }
 }
 
 function KarteZiehen(){
-   if(checkKarten(HandkartenSpieler)==false){
+   if(KartenPrüfung(HandkartenSpieler)==false){
        HandkartenSpieler.push(Kartenstapel[Kartenstapel.length - 1]);
        Kartenstapel.splice(Kartenstapel.length -1, 1);
        updateHTML("HandkartenSpieler");
        updateHTML("Kartenstapel");
    }
-   if(checkKarten(HandkartenSpieler)==false){
-       Gegnerzug();
+   if(KartenPrüfung(HandkartenSpieler)==false){
+       ZugGegner();
    }
 }
 
-function Gegnerzug(){      //Gegner legt Karte; wenn keine passt, zieht er vom Kartenstapel
+function ZugGegner(){      //Gegner legt Karte; wenn keine passt, zieht er vom Kartenstapel
        let i = 0;
        for (i; i<HandkartenGegner.length;i++){
            if(HandkartenGegner[i].Farbe == Ablagestapel[Ablagestapel.length-1].Farbe || HandkartenGegner[i].Wertigkeit == Ablagestapel[Ablagestapel.length-1].Wertigkeit){
@@ -105,7 +105,7 @@ function Gegnerzug(){      //Gegner legt Karte; wenn keine passt, zieht er vom K
 
 }
 
-function checkKarten(array :Karte[]) :boolean {    //Prüfung, ob Karte legbar ist
+function KartenPrüfung(array :Karte[]) :boolean {    //Prüfung, ob Karte legbar ist
 let passendeKarte : boolean = false;
 for (let i=0; i<array.length;i++){
     if(array[i].Farbe == Ablagestapel[Ablagestapel.length-1].Farbe || array[i].Wertigkeit == Ablagestapel[Ablagestapel.length-1].Wertigkeit){
@@ -126,14 +126,14 @@ if (Zielort =="HandkartenSpieler"){
 }
 if (Zielort == "HandkartenGegner"){
     for(let i = 0; i < HandkartenGegner.length; i++){
-        KarteVerdeckt(HandkartenGegner [i], "HandkartenGegner",i);
+        verdeckteKarte(HandkartenGegner [i], "HandkartenGegner",i);
     }
 }
 if (Zielort == "Ablagestapel"){
     KarteHTML(Ablagestapel[Ablagestapel.length - 1], "Ablagestapel",Ablagestapel.length-1);
 }
 if (Zielort == "Kartenstapel"){
-    KarteVerdeckt(Kartenstapel[Kartenstapel.length-1], "Kartenstapel",Kartenstapel.length-1);
+    verdeckteKarte(Kartenstapel[Kartenstapel.length-1], "Kartenstapel",Kartenstapel.length-1);
 }
 }
 
