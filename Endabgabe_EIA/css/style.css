@@ -1,9 +1,12 @@
 header {
-    background-color: rgb(184, 179, 179);
-    width: 100%;   
+    background-color: gray;
+    text-align: center;
+}
+body {
+    background-color: brown;
 }
 div{ 
-    background-color:antiquewhite;
+    background-color: rosybrown;
     margin-bottom:20%;
     margin-top:5%;
 }
